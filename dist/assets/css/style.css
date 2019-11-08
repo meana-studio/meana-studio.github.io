@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.uk-card-footer {
+  border-top: none !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "palt";
+  background-color: #f4f4f4;
+  background-image: url(../img/bg.png);
+  background-position: left top;
+  background-repeat: repeat;
+  color: #5f5e5e;
+  font-family: Helvetica, 'Noto Sans JP', sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 0.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+a {
+  -webkit-transition: all 0.5s;
+  -webkit-transition-timing-function: linear;
+  color: #5f5e5e;
+  text-decoration: none;
+  transition: all 0.5s;
+  transition-timing-function: linear;
+}
+
+a:hover {
+  -webkit-transition: all 0.5s;
+  -webkit-transition-timing-function: linear;
+  color: #5f5e5e;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: all 0.5s;
+  transition-timing-function: linear;
+}
+
+.uk-button-primary {
+  border-radius: .2rem;
+  background-color: #EEE;
+  color: #5f5e5e;
+  font-weight: 600;
+}
+
+.uk-button-primary:hover {
+  background-color: rgba(204, 204, 204, 0.8);
+  color: #5f5e5e;
+}
+
+.uk-button-large {
+  padding: 0 40px;
+  font-size: 1rem;
+  line-height: 43px;
+}
+
+#header .uk-navbar {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.25rem 1rem 1.25rem 2rem;
+  background-color: #FFF;
+}
+
+#header .logo {
+  outline: none;
+}
+
+#header .logo .st0 {
+  fill: #5f5e5e;
+}
+
+#header .logo svg {
+  display: inline-block;
+  height: 16px;
+  outline: none;
+}
+
+#header .navbar-collapse.show {
+  padding-bottom: 3rem;
+}
+
+#header #navigation {
+  font-size: 1rem;
+}
+
+#header .uk-navbar-nav {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .uk-navbar-nav li.nav {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+#header .uk-navbar-nav li.nav > a {
+  display: inline-block;
+  min-height: 0;
+  margin: 0.5rem 0.25rem;
+  padding: 0;
+  color: #5f5e5e;
+  font-family: Helvetica, 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+}
+
+#header .contact {
+  margin-left: 1rem;
+}
+
+#header .contact a {
+  display: inline-block;
+  min-height: 0;
+  color: #5f5e5e;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 43px;
+  vertical-align: middle;
+}
+
+#header .contact a .icon {
+  margin-right: .4em;
+}
+
+.uk-navbar-dropdown {
+  width: 250px;
+  padding: .5em 1.5rem;
+  border: none;
+}
+
+.uk-navbar-dropdown .uk-navbar-dropdown-nav {
+  border-radius: 0;
+  text-align: left;
+}
+
+.uk-navbar-dropdown .uk-navbar-dropdown-nav a {
+  display: inline-block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: #5f5e5e;
+  font-size: .9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.navbar-toggler {
+  padding: 0;
+  border: none;
+}
+
+.navbar-toggler button {
+  outline: none;
+}
+
+.navbar-toggler ion-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+#footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid #ebebeb;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section h1 {
+  margin-bottom: 5rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.section h3 {
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section > p {
+  text-align: center;
+}
+
+#main-cover {
+  position: relative;
+  padding-top: 40%;
+  padding-bottom: 2%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-cover:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+#main-cover h1 {
+  z-index: 2;
+  position: relative;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.home-section h2 {
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.home-section h3 {
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#home-about {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/bg_white.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#home-about h3 {
+  z-index: 2;
+  position: relative;
+  line-height: 1;
+  text-align: center;
+}
+
+#home-about .about {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+#home-about .about .uk-cover-container {
+  width: 220px;
+  height: 220px;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+#home-about .about .about-content {
+  max-width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#home-about .about .more {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#program-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.personal-container h2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.personal {
+  box-sizing: border-box;
+  padding-top: 30%;
+  padding-bottom: 5%;
+}
+
+.personal .inner {
+  z-index: 2;
+  position: relative;
+}
+
+.personal .inner p {
+  margin-bottom: 2rem;
+}
+
+.personal .inner p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1140px) {
+  #header .uk-navbar {
+    padding: 1rem 0.5rem 1rem 1.25rem;
+  }
+  #header .logo {
+    text-align: center;
+  }
+  #header .logo svg {
+    height: 14px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .section h1 {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .section h3 {
+    font-size: 1rem;
+  }
+  #main-cover {
+    padding-top: 67%;
+  }
+  #main-cover h1 {
+    font-size: 1rem;
+  }
+  .home-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .home-section h2 {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+  .home-section h3 {
+    font-size: 1rem;
+  }
+  .personal h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .personal .inner p {
+    margin-bottom: 1rem;
+  }
+}
+
+/*# sourceMappingURL=../maps/style.css.map */

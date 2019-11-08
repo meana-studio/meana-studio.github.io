@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+@import 'mixin';
+@import 'base_edit';
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,400,300,600,700%7CRaleway:300,400,700%7CQuicksand:400,700%7CPhilosopher);
+@import url(/assets/css/font-awesome.min.css);
+
+body {
+	background-color: #FFF;
+	min-width: none;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.8;
+	
+	#studio,
+	#care,
+	#personal {
+		margin-top: 2em;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 2em;
+		font-size: 1.4rem;
+		letter-spacing: normal;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		margin-bottom: 2em;
+		@include normal();
+		position: relative;
+		
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -0.5em;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #CCC;
+			z-index: 9999;
+		}
+	}
+
+	p {
+		margin-bottom: 2em;
+		font-size: 1.05rem;
+		line-height: 2;
+	}
+	
+	h1 {
+		text-align: center;
+		margin-bottom: 2em;
+		font-size: 1.4rem;
+		letter-spacing: normal;
+	}
+
+	.point-wrap {
+		padding: 1em 0;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		> div {
+			padding: 1.5em 0;
+			h2 {
+				font-size: 1rem;
+				background-color: #F2F2F2;
+				padding: 0.5em 1em;
+				margin-bottom: 1em;
+			}
+			li {
+				margin-bottom: 0.5em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			ul {
+				margin-left: 2em;
+				font-size: 0.8rem;
+				letter-spacing: normal;
+				li {
+					list-style: square outside;
+				}
+			}
+		
+			ol {
+				margin-left: 2em;
+				font-size: 0.8rem;
+				letter-spacing: normal;
+				li {
+					list-style: decimal outside;
+				}
+			}
+		}
+	}
+	
+	dl {
+		margin: 1em;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		dt,
+		dd {
+			display: table-cell;
+			font-size: 1rem;
+		}
+		dd {
+			text-align: right;
+		}
+	}
+	
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.join {
+		margin-bottom: 2em;
+		h2 {
+			border-top: none;
+			border-bottom: none;
+			font-size: 1.2rem;
+			padding: 0.5em;
+			border-top: 2px solid #000;
+			border-bottom: 1px solid #000;
+			margin-bottom: 2em;
+			@include normal();
+		}
+	}
+}

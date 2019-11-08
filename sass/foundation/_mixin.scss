@@ -1,0 +1,37 @@
+$yellow: #F6BF0B;
+$black: #5f5e5e;
+$text-gray: #CCC;
+$gray: #ebebeb;
+$bg-gray: #f4f4f4;
+
+
+// media query
+$breakpoints: (
+  'sm': 'screen and (max-width: 540px)',
+  'md': 'screen and (max-width: 720px)',
+  'lg': 'screen and (max-width: 960px)',
+  'xl': 'screen and (max-width: 1140px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+@mixin flex($flex-wrap,$justify-content,$align-items) {
+	display: flex;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin animation($seconds,$function) {
+	-webkit-transition: all $seconds;
+	-moz-transition: all $seconds;
+	-ms-transition: all $seconds;
+	 -o-transition: all $seconds;
+	transition: all $seconds;
+	-webkit-transition-timing-function: $function;
+	transition-timing-function: $function;
+}

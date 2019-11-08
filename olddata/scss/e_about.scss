@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@import 'mixin';
+@import 'base_edit';
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,400,300,600,700%7CRaleway:300,400,700%7CQuicksand:400,700%7CPhilosopher);
+@import url(/assets/css/font-awesome.min.css);
+
+body {
+	background-color: #FFF;
+	min-width: none;
+}
+
+#concept {
+	margin-top: 2em;
+	letter-spacing: -.40em;
+	.concept {
+		@include inline-block(top);
+		width: 31.3333333334%;
+		margin: 0 1% 1em;
+		border: 1px solid #EBEBEB;
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+		padding: 2em;
+		min-height: 300px;
+		background-color: #FFF;
+		h2 {
+			margin: 0;
+			padding: 0;
+			margin-bottom: 1em;
+			@include mincho();
+			font-size: 1.2rem;
+			text-align: center;
+		}
+	}
+}
+
+#photo {
+	margin-top: 1em;
+	h2 {
+		margin-top: 1em;
+		padding-top: 1em;
+		border-top: 1px solid #EBEBEB;
+		margin-bottom: 1em;
+		i {
+			margin-right: .5em;
+		}
+	}
+	.gallery {
+		display: block;
+		letter-spacing: -.40em;
+		img {
+			width: 33.33333333333334%;
+			@include inline-block(top);
+		}
+	}
+}
+#about {
+	margin-top: 4em;
+	h2 {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid #EBEBEB;
+		i {
+			margin-right: .5em;
+		}
+	}
+	#access {
+		padding-bottom: 10em;
+		letter-spacing: -.40em;
+		#access-map,
+		.info {
+			@include inline-block(top);
+		}
+		#access-map {
+			#map {
+				height: 400px;
+				border: 1px solid #CCC;
+				margin-bottom: 1em;		
+			}
+			a {
+				text-decoration: underline;
+			}
+			width: 55%;
+		}
+		.info {
+			width: 45%;
+			padding-right: 1.5em;
+			font-size: 1rem;
+			p {
+				&.tel {
+					font-size: 1.3rem;
+					i {
+						margin-right: .5em;
+						font-size: 1rem;
+					}
+				}
+			}
+			.point {
+				li {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+}

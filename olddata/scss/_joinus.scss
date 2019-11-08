@@ -1,0 +1,161 @@
+#joinus {
+	margin-top: 4em;
+	.lesson-container {
+		@include flex(nowrap,space-between,flex-start);
+		&.start {
+			justify-content: center;
+			margin-bottom: 48px;
+			.lesson {
+				flex-basis: 60%;
+			}
+			.tables {
+				margin-top: 0;
+			}
+			.point {
+				ul {
+					li {
+						margin-bottom: 6px;
+					}
+				}
+			}
+		}
+	}
+	.lesson {
+		flex-basis: 48.5%;
+		h2 {
+			border-top: none;
+			border-bottom: none;
+			font-size: 1.6rem;
+			padding: 1em 0;
+			border-top: 1px solid #CCC;
+			border-bottom: 1px solid #CCC;
+			margin-bottom: 1em;
+			@include flex(nowrap,space-between,center);
+			small {
+				font-family: 'Tangerine', cursive;
+				color: #666;
+				font-size: 2rem;
+			}
+		}
+		.lead {
+			font-size: 1.4rem;
+			text-align: left;
+			p {
+				font-size: 1.4rem;
+				margin-bottom: 16px;
+				&:last-of-typw {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	
+	.price {
+		text-align: center;
+		@include flex(nowrap,center,center);
+		.caption {
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+		dl {
+			margin-left: 3em;
+			dd {
+				font-weight: 600;
+				font-size: 1.6rem;
+				small {
+					display: inline-block;
+					margin-left: 1em;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	
+	.tables {
+		margin-top: 48px;
+		display: table;
+		table-layout: fixed;
+		border-collapse: separate;
+		border-spacing: 5px;
+		width: 100%;
+		.caption {
+			font-size: 1.5rem;
+			line-height: 1;
+			font-weight: 500;
+			text-align: center;
+			display: table-caption;
+			margin-bottom: 16px;
+		}
+		dl {
+			display: table-row;
+			dt,
+			dd {
+				display: table-cell;
+				font-size: 1.4rem;
+				padding: .5em 1em;
+			}
+			dt {
+				width: 25%;
+				text-align: center;
+				small {
+					font-size: 1rem;
+					display: inline-block;
+					margin-left: 1em;
+				}
+				span {
+					display: inline-block;
+					margin-left: 1em;
+					font-size: 1.2rem;
+				}
+				&.long {
+					width: 50%;
+				}
+			}
+			dd {
+				text-align: right;
+				small {
+					font-size: 1.2rem;
+					display: inline-block;
+					margin-left: 1em;
+				}
+			}
+			&.head {
+				display: table-header-group;
+				dt,
+				dd {
+					text-align: center;
+					font-weight: 500;
+					background-color: #EBEBEB;
+				}
+			}
+		}		
+	}
+
+	.point {
+		margin-top: 16px;
+		border-top: 1px solid #CCC;
+		padding-top: 16px;
+		ul {
+			margin-left: 2em;
+			li {
+				margin-bottom: 24px;
+				list-style: square outside;
+				font-size: 1.3rem;
+			}
+		}
+	}
+	
+	.join {
+		width: 50%;
+		margin-bottom: 2em;
+		@include inline-block(top);
+		&:nth-of-type(odd) {
+			padding-right: 1em;
+		}
+		&:nth-of-type(even) {
+			padding-left: 1em;
+		}
+		h2 {
+		}
+	}
+}

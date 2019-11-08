@@ -1,0 +1,102 @@
+#header {	
+	.uk-navbar {
+		align-items: center;
+		background-color: #FFF;
+		padding: 1.25rem 1rem 1.25rem 2rem;
+		@include mq(xl) {
+			padding: 1rem 0.5rem 1rem 1.25rem;
+		}
+	}
+	.logo {
+		outline: none;
+		.st0 {
+			fill: $black;
+		}
+		svg {
+			height: 16px;
+			outline: none;
+			display: inline-block;
+			
+		}
+		@include mq(xl) {
+			text-align: center;
+			svg {
+				height: 14px;
+			}
+		}
+	}
+	.navbar-collapse.show {
+		padding-bottom: 3rem;
+	}
+	#navigation {
+		font-size: 1rem;
+	}
+	.uk-navbar-nav {
+		align-items: center;
+		li {
+			&.nav {
+				margin-left: 1rem;
+				margin-right: 1rem;
+				> a {
+					font-family: Helvetica, 'Noto Sans JP', sans-serif;
+					display: inline-block;
+					min-height: 0;
+					font-size: 1rem;
+					font-weight: 600;
+					font-style: normal;
+					color: $black;
+					line-height: 1;
+					padding: 0;
+					margin: 0.5rem 0.25rem;
+				}
+			}
+		}		
+	}
+	.contact {
+		margin-left: 1rem;
+		a {
+			color: $black;
+			font-size: .9rem;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 43px;
+			font-weight: 600;
+			min-height: 0;
+			.icon {
+				margin-right: .4em;
+			}
+		}
+	}	
+}
+
+.uk-navbar-dropdown {
+	border: none;
+	width: 250px;
+	padding: .5em 1.5rem;
+	.uk-navbar-dropdown-nav {
+		border-radius: 0;
+		text-align: left;	
+		a {
+			color: $black;
+			display: inline-block;
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+			font-size: .9rem;
+			font-weight: 600;	
+			text-align: center;
+		}
+	}
+}
+
+.navbar-toggler {
+	padding: 0;
+	border: none;
+
+	button {
+		outline: none;
+	}
+	ion-icon {
+		font-size: 2rem;
+		line-height: 1;
+	}
+}

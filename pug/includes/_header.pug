@@ -1,0 +1,40 @@
+header#header(uk-sticky)
+	nav.uk-navbar-container(uk-navbar)
+		div.uk-navbar-left
+			a.logo(href='/')
+				include ./_logo.pug
+		div#navigation.uk-navbar-right
+			ul(class="uk-navbar-nav uk-visible@m")
+				li.nav
+					a(href="#") メニュー
+					div.uk-navbar-dropdown
+						ul.uk-nav.uk-navbar-dropdown-nav
+							li
+								a(href="/program/") メニューTOP
+							li
+								a(href="/program/personal/") パーソナルトレーニング
+							li
+								a(href="/program/body/") ボディメンテナンス
+							li
+								a(href="/program/studio/") スタジオレッスン
+							li
+								a(href="/program/kids/") キッズレッスン
+				li.nav
+					a(href="#") スタジオ
+					div.uk-navbar-dropdown
+						ul.uk-nav.uk-navbar-dropdown-nav
+							li
+								a(href="/about/personal/") スタジオ紹介
+							li
+								a(href="/voice/") お客様の声
+							li
+								a(href="/join/") 料金・入会
+				li.nav
+					a(href='/voice/') お客様の声
+				li.nav
+					a(href='/news/') ブログ
+			div(class="contact uk-visible@m")
+				a.uk-button.uk-button-primary(href='')
+					span.icon(uk-icon="mail")
+					span お問い合わせ
+			a(class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon)

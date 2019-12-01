@@ -1,0 +1,12 @@
+{
+  "name": "www.meana-studio.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bootscafe/meana.git",
+  "author": "Kyosuke Koizumi <kyosuke@bootscafe.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

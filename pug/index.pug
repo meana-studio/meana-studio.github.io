@@ -1,0 +1,101 @@
+extends ./includes/_layout
+block var
+	- title = 'MEANAスタジオ - 上尾駅'
+	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
+	- url = 'https://www.meana-studio.com/'
+	- image = 'image'
+	- site_name = 'site_name'
+	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+block body
+	section#main-cover(style="background-image:url(uploads/home_cover.jpg);")
+		h1 カラダは鍛えるのではなく「整える」
+			br
+			| 解剖学に基づいた総合ボディメイクスタジオ
+	section#home-service.home-section.uk-section
+		div.uk-container
+			h2 サービスメニュー
+			div(class="service-container uk-grid uk-flex-stretch uk-child-width-1-2\@m")
+				div.uk-margin-large-bottom.uk-animation-fade
+					div.uk-card.uk-card-default
+						div.uk-card-media-top
+							div.uk-cover-container
+								img(src="uploads/home_service_personal.jpg" uk-cover)
+								canvas(width="400" height="280")
+							div.uk-card-body
+								h3.uk-card-title パーソナルトレーニング
+								p 一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング
+							div.uk-card-footer.uk-text-center
+								a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.uk-margin-large-bottom.uk-animation-fade
+					div.uk-card.uk-card-default
+						div.uk-card-media-top
+							div.uk-cover-container
+								img(src="uploads/home_service_body.jpg" uk-cover)
+								canvas(width="400" height="280")
+							div.uk-card-body
+								h3.uk-card-title ボディメンテナンス
+								p テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。
+							div.uk-card-footer.uk-text-center
+								a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.uk-margin-large-bottom.uk-animation-fade
+					div.uk-card.uk-card-default
+						div.uk-card-media-top
+							div.uk-cover-container
+								img(src="uploads/home_service_studio.jpg" uk-cover)
+								canvas(width="400" height="280")
+							div.uk-card-body
+								h3.uk-card-title スタジオレッスン
+								p ５〜15人のグループで行うスタジオ・レッスン。
+							div.uk-card-footer.uk-text-center
+								a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.uk-margin-large-bottom.uk-animation-fade
+					div.uk-card.uk-card-default
+						div.uk-card-media-top
+							div.uk-cover-container
+								img(src="uploads/home_service_kids.jpg" uk-cover)
+								canvas(width="400" height="280")
+							div.uk-card-body
+								h3.uk-card-title キッズレッスン
+								p 12歳までのキッズ専用のグループレッスン。
+							div.uk-card-footer.uk-text-center
+								a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+	section#home-about.home-section.uk-section
+		div.uk-container.uk-container-expand
+			h2 STUDIO MEANAについて
+			div(class="about-container uk-grid uk-child-width-1-4\@m" uk-height-match="target: .about-content > p")
+				div.about
+					div.uk-cover-container
+						img(src="uploads/home_about_studio.jpg" uk-cover)
+						canvas(width="220" height="220")
+					div.about-content
+						h3 スタジオ紹介
+						p 創業1999年、解剖学に基づいたバレエメソッドでカラダを根本から整えるパーソナル・トレーニング・スタジオ
+					div.more
+						a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.about
+					div.uk-cover-container
+						img(src="uploads/home_about_voice.jpg" uk-cover)
+						canvas(width="220" height="220")
+					div.about-content
+						h3 お客様の声
+						p お子様から高齢者まで様々な会員の中からの体験談をご紹介
+					div.more
+						a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.about
+					div.uk-cover-container
+						img(src="uploads/home_about_blog.jpg" uk-cover)
+						canvas(width="220" height="220")
+					div.about-content
+						h3 ブログ
+						p スタッフによる日々の活動やスタジオの様子などをご紹介
+					div.more
+						a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る
+				div.about
+					div.uk-cover-container
+						img(src="uploads/home_cover.jpg" uk-cover)
+						canvas(width="220" height="220")
+					div.about-content
+						h3 料金・入会
+						p レッスン料金、入会の手順・スタジオの利用方法などはこちらから
+					div.more
+						a.uk-button.uk-button-primary.uk-button-large(href="") もっと見る

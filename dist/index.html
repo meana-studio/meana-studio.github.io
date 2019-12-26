@@ -61,7 +61,7 @@
 						</svg></a></div>
 				<div class="uk-navbar-right" id="navigation">
 					<ul class="uk-navbar-nav uk-visible@m">
-						<li class="nav"><a href="#">メニュー</a>
+						<li class="nav"><a href="#"><span>メニュー</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/program/">メニューTOP</a></li>
@@ -72,7 +72,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="nav"><a href="#">スタジオ</a>
+						<li class="nav"><a href="#"><span>スタジオ</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/about/personal/">スタジオ紹介</a></li>
@@ -88,14 +88,15 @@
 				</div>
 			</nav>
 		</header>
-		<section id="main-cover" style="background-image:url(uploads/home_cover.jpg);">
+		<section class="uk-animation-fade uk-cover-container uk-height-max-large" id="main-cover">
+			<canvas width="2000" height="1128"></canvas><img src="uploads/home_cover.jpg" uk-cover>
 			<h1>カラダは鍛えるのではなく「整える」<br>解剖学に基づいた総合ボディメイクスタジオ</h1>
 		</section>
 		<section class="home-section uk-section" id="home-service">
 			<div class="uk-container">
-				<h2>サービスメニュー</h2>
-				<div class="service-container uk-grid uk-flex-stretch uk-child-width-1-2@m">
-					<div class="uk-margin-large-bottom uk-animation-fade">
+				<h2 class="uk-animation-slide-bottom-medium">サービスメニュー</h2>
+				<div class="service-container uk-grid uk-flex-stretch uk-child-width-1-2@m" uk-scrollspy="target: .uk-card; cls: uk-animation-slide-bottom-medium; delay: 40">
+					<div class="uk-margin-large-bottom">
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
 								<div class="uk-cover-container"><img src="uploads/home_service_personal.jpg" uk-cover>
@@ -109,7 +110,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="uk-margin-large-bottom uk-animation-fade">
+					<div class="uk-margin-large-bottom">
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
 								<div class="uk-cover-container"><img src="uploads/home_service_body.jpg" uk-cover>
@@ -123,7 +124,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="uk-margin-large-bottom uk-animation-fade">
+					<div class="uk-margin-large-bottom">
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
 								<div class="uk-cover-container"><img src="uploads/home_service_studio.jpg" uk-cover>
@@ -137,7 +138,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="uk-margin-large-bottom uk-animation-fade">
+					<div class="uk-margin-large-bottom">
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
 								<div class="uk-cover-container"><img src="uploads/home_service_kids.jpg" uk-cover>
@@ -156,8 +157,8 @@
 		</section>
 		<section class="home-section uk-section" id="home-about">
 			<div class="uk-container uk-container-expand">
-				<h2>STUDIO MEANAについて</h2>
-				<div class="about-container uk-grid uk-child-width-1-4@m" uk-height-match="target: .about-content &gt; p">
+				<h2 class="uk-animation-slide-bottom-medium">STUDIO MEANAについて</h2>
+				<div class="about-container uk-grid uk-child-width-1-4@m" uk-height-match="target: .about-content &gt; p" uk-scrollspy="target: .about; cls: uk-animation-slide-bottom-medium; delay: 40">
 					<div class="about">
 						<div class="uk-cover-container"><img src="uploads/home_about_studio.jpg" uk-cover>
 							<canvas width="220" height="220"></canvas>

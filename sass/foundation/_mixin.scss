@@ -9,6 +9,7 @@ $bg-gray: #f4f4f4;
 $breakpoints: (
   'sm': 'screen and (max-width: 540px)',
   'md': 'screen and (max-width: 720px)',
+  'mdm': 'screen and (min-width: 720px)',
   'lg': 'screen and (max-width: 960px)',
   'xl': 'screen and (max-width: 1140px)',
 ) !default;
@@ -34,4 +35,10 @@ $breakpoints: (
 	transition: all $seconds;
 	-webkit-transition-timing-function: $function;
 	transition-timing-function: $function;
+}
+
+@mixin background($x,$y) {
+	background-position: $x $y;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

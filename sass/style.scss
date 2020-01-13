@@ -11,6 +11,7 @@
 // Layout
 // ==========================================================================
 
+@import "layout/layout";
 @import "layout/header";
 @import "layout/footer";
 
@@ -23,7 +24,11 @@
 // Component
 // -----------------------------------------------------------------
 
+@import "object/component/headings";
+@import "object/component/card";
 @import "object/component/section";
+@import "object/component/schedule";
+@import "object/component/hero_title";
 
 // -----------------------------------------------------------------
 // Project

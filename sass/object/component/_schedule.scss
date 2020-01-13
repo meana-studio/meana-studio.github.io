@@ -1,0 +1,47 @@
+.schedule {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	background-color: #FFF;
+	//box-shadow: 0px 15px 45px -9px rgba(0,0,0,.2);
+	&:nth-of-type(even) {
+		background-color: #FBFBFB;
+	}
+	@include flex(nowrap,space-between,center);
+	h3 {
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+	p {
+		font-size: 1.4rem;
+	}
+	.content {
+		margin-left: 32px;
+		flex: 1;
+	}
+	.s-schedule {
+		position: relative;
+		text-align: center;
+		flex-basis: 100px;
+	}
+	.icons {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	ion-icon {
+		//position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 3rem;
+	}
+	.day {
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 2rem;
+		line-height: 1;
+		margin: 0;
+	}
+	time {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.2rem;
+	}
+}

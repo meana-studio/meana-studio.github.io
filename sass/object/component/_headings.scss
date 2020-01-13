@@ -1,0 +1,29 @@
+.section-title {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 5rem;
+	line-height: 1;
+	span {
+		display: block;
+	}
+	.en {
+		font-weight: normal;
+		font-size: 1.5rem;
+		margin-top: 12px;
+	}
+	@include mq(md) {
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+}
+
+.section-title-s {
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin-bottom: 1em;
+	line-height: 1;
+	@include mq(md) {
+		font-size: 1rem;
+	}
+}

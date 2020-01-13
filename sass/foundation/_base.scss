@@ -3,8 +3,8 @@ html {
 }
 
 body {
-	//font-family: Helvetica, 'Noto Sans JP', sans-serif;
-	font-family: Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
+	font-family: Helvetica, 'Noto Sans JP', sans-serif;
+	//font-family: Hiragino Sans,Hiragino Kaku Gothic ProN,Meiryo,sans-serif;
 	line-height: 1.8;
 	color: $black;
 	-webkit-font-smoothing: antialiased;
@@ -13,13 +13,22 @@ body {
 	font-feature-settings: "palt";
 	font-size: 10px;
 	font-size: 1.0rem;
-	background-image: url(../img/bg.png);
-	background-position: left top;
-	background-repeat: repeat;
 	background-color: $bg-gray;
-	letter-spacing: 0.05rem;
+	letter-spacing: 0.76px;
 	text-align: justify;
 	text-justify: inter-ideograph;
+	&.home {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		&.animation-end {
+			position: static;
+			overflow: auto;
+		}
+	}
 }
 
 a {

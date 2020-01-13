@@ -19,13 +19,14 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-touch-icon144.png">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css">
+		<link rel="stylesheet" href="/assets/css/uikit.min.css">
+		<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/style.css">
 	</head>
-	<body>
+	<body class="home">
 		<header id="header" uk-sticky>
 			<nav class="uk-navbar-container" uk-navbar>
-				<div class="uk-navbar-left"><a class="logo" href="/">
+				<div class="uk-navbar-left"><a class="logo uk-animation-fade" href="/">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 171.68 17.05" style="enable-background:new 0 0 171.68 17.05;" xml:space="preserve">
 							<style type="text/css">
 								.st0{fill:#353042;}
@@ -84,124 +85,83 @@
 						<li class="nav"><a href="/voice/">お客様の声</a></li>
 						<li class="nav"><a href="/news/">ブログ</a></li>
 					</ul>
-					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
+					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" id="toggle-menu" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
 				</div>
 			</nav>
 		</header>
-		<section class="uk-animation-fade uk-cover-container uk-height-max-large" id="main-cover">
-			<canvas width="2000" height="1128"></canvas><img src="uploads/home_cover.jpg" uk-cover>
-			<h1>カラダは鍛えるのではなく「整える」<br>解剖学に基づいた総合ボディメイクスタジオ</h1>
-		</section>
-		<section class="home-section uk-section" id="home-service">
-			<div class="uk-container">
-				<h2 class="uk-animation-slide-bottom-medium">サービスメニュー</h2>
-				<div class="service-container uk-grid uk-flex-stretch uk-child-width-1-2@m" uk-scrollspy="target: .uk-card; cls: uk-animation-slide-bottom-medium; delay: 40">
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="uploads/home_service_personal.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">パーソナルトレーニング</h3>
-									<p>一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="uploads/home_service_body.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">ボディメンテナンス</h3>
-									<p>テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="uploads/home_service_studio.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">スタジオレッスン</h3>
-									<p>５〜15人のグループで行うスタジオ・レッスン。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="uploads/home_service_kids.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">キッズレッスン</h3>
-									<p>12歳までのキッズ専用のグループレッスン。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
+		<div id="container">
+			<section id="main-cover">
+				<div id="main-cover-image"></div>
+				<div id="cover-bg"></div>
+				<div class="cover-content">
+					<h1 id="message">カラダは鍛えるのではなく「整える」<br>解剖学に基づいた総合ボディメイクスタジオ</h1>
 				</div>
+				<div class="scroll" id="scroll"><a href="#home-service" uk-scroll><span>Scroll</span><span class="icon" uk-icon="icon: chevron-down"></span></a></div>
+			</section>
+			<div id="animaton-area">
+				<section class="home-section uk-section" id="home-service">
+					<div class="uk-container">
+						<h2 class="section-title" uk-scrollspy="cls: uk-animation-slide-bottom-medium">サービスメニュー</h2>
+						<div class="service-container" uk-height-match="target: .card-body"><a class="card" href="/program/personal/">
+								<div class="card-container">
+									<div class="card-img" style="background-image:url(uploads/home_service_personal.jpg);"></div>
+									<div class="card-body">
+										<h3>パーソナルトレーニング</h3>
+										<p>一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
+									</div>
+								</div></a><a class="card" href="/program/body/">
+								<di class="card-container">
+									<div class="card-img" style="background-image:url(uploads/home_service_body.jpg);"></div>
+									<div class="card-body">
+										<h3>ボディメンテナンス</h3>
+										<p>テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。</p>
+									</div>
+								</di></a><a class="card" href="/program/studio/" uk-scrollspy="uk-animation-slide-bottom-medium">
+								<div class="card-container">
+									<div class="card-img" style="background-image:url(uploads/home_service_studio.jpg);"></div>
+									<div class="card-body">
+										<h3>スタジオレッスン</h3>
+										<p>５〜15人のグループで行うスタジオ・レッスン。</p>
+									</div>
+								</div></a><a class="card" href="/program/kids/" uk-scrollspy="uk-animation-slide-bottom-medium">
+								<div class="card-container">
+									<div class="card-img" style="background-image:url(uploads/home_service_kids.jpg);"></div>
+									<div class="card-body">
+										<h3>キッズレッスン</h3>
+										<p>12歳までのキッズ専用のグループレッスン。</p>
+									</div>
+								</div></a></div>
+					</div>
+				</section>
+				<section class="home-section uk-section" id="home-about" uk-parallax="bgy: -200">
+					<div class="img" style="background-image:url(uploads/home_studio.png);"></div>
+					<div class="uk-container">
+						<h2 class="section-title" uk-scrollspy="cls: uk-animation-slide-bottom-medium">STUDIO MEANAについて</h2>
+						<div class="about-container" uk-scrollspy="target: &gt; .card; cls: uk-animation-slide-bottom-medium; delay: 50" uk-height-match="target: .card-body &gt; p"><a class="card" href="/about/">
+								<div class="card-img" style="background-image:url(uploads/home_about_studio.jpg);"></div>
+								<div class="card-body">
+									<h3>スタジオ紹介</h3>
+									<p>創業1999年、解剖学に基づいたバレエメソッドでカラダを根本から整えるパーソナル・トレーニング・スタジオ</p>
+								</div></a><a class="card" href="/voice/">
+								<div class="card-img" style="background-image:url(uploads/home_about_voice.jpg);"></div>
+								<div class="card-body">
+									<h3>お客様の声</h3>
+									<p>お子様から高齢者まで様々な会員の中からの体験談をご紹介</p>
+								</div></a><a class="card" href="/blog/">
+								<div class="card-img" style="background-image:url(uploads/home_about_blog.jpg);"></div>
+								<div class="card-body">
+									<h3>ブログ</h3>
+									<p>スタッフによる日々の活動やスタジオの様子などをご紹介</p>
+								</div></a><a class="card" href="/price/">
+								<div class="card-img" style="background-image:url(uploads/home_cover.jpg);"></div>
+								<div class="card-body">
+									<h3>料金・入会</h3>
+									<p>レッスン料金、入会の手順・スタジオの利用方法などはこちらから</p>
+								</div></a></div>
+					</div>
+				</section>
 			</div>
-		</section>
-		<section class="home-section uk-section" id="home-about">
-			<div class="uk-container uk-container-expand">
-				<h2 class="uk-animation-slide-bottom-medium">STUDIO MEANAについて</h2>
-				<div class="about-container uk-grid uk-child-width-1-4@m" uk-height-match="target: .about-content &gt; p" uk-scrollspy="target: .about; cls: uk-animation-slide-bottom-medium; delay: 40">
-					<div class="about">
-						<div class="uk-cover-container"><img src="uploads/home_about_studio.jpg" uk-cover>
-							<canvas width="220" height="220"></canvas>
-						</div>
-						<div class="about-content">
-							<h3>スタジオ紹介</h3>
-							<p>創業1999年、解剖学に基づいたバレエメソッドでカラダを根本から整えるパーソナル・トレーニング・スタジオ</p>
-						</div>
-						<div class="more"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-					</div>
-					<div class="about">
-						<div class="uk-cover-container"><img src="uploads/home_about_voice.jpg" uk-cover>
-							<canvas width="220" height="220"></canvas>
-						</div>
-						<div class="about-content">
-							<h3>お客様の声</h3>
-							<p>お子様から高齢者まで様々な会員の中からの体験談をご紹介</p>
-						</div>
-						<div class="more"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-					</div>
-					<div class="about">
-						<div class="uk-cover-container"><img src="uploads/home_about_blog.jpg" uk-cover>
-							<canvas width="220" height="220"></canvas>
-						</div>
-						<div class="about-content">
-							<h3>ブログ</h3>
-							<p>スタッフによる日々の活動やスタジオの様子などをご紹介</p>
-						</div>
-						<div class="more"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-					</div>
-					<div class="about">
-						<div class="uk-cover-container"><img src="uploads/home_cover.jpg" uk-cover>
-							<canvas width="220" height="220"></canvas>
-						</div>
-						<div class="about-content">
-							<h3>料金・入会</h3>
-							<p>レッスン料金、入会の手順・スタジオの利用方法などはこちらから</p>
-						</div>
-						<div class="more"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-					</div>
-				</div>
-			</div>
-		</section>
+		</div>
 		<footer id="footer">&copy; Studio Meana</footer>
 		<div id="offcanvas-usage" uk-offcanvas>
 			<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
@@ -221,9 +181,11 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-		<script src="/assets/js/components.js"></script>
+		<script src="/assets/js/module/uikit.min.js"></script>
+		<script src="/assets/js/module/uikit-icons.min.js"></script>
+		<script src="/assets/js/module/gsap/gsap.min.js"></script>
+		<script src="/assets/js/module/in-view.min.js"></script>
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<script src="/assets/js/home.js"></script>
 	</body>
 </html>

@@ -1,0 +1,27 @@
+.herotitle-container {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	.hero-content {
+		position: absolute;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+		color: #FFF;
+		white-space: nowrap;
+		text-shadow: 0 0 10px rgba(0,0,0,0.5);
+		h1 {
+			font-size: 3.2rem;
+			margin-bottom: 24px;
+			font-weight: bold;
+			color: #FFF;
+			span {
+				display: block;
+			}
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
+}

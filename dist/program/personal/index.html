@@ -19,13 +19,14 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-touch-icon144.png">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css">
+		<link rel="stylesheet" href="/assets/css/uikit.min.css">
+		<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/style.css">
 	</head>
 	<body>
 		<header id="header" uk-sticky>
 			<nav class="uk-navbar-container" uk-navbar>
-				<div class="uk-navbar-left"><a class="logo" href="/">
+				<div class="uk-navbar-left"><a class="logo uk-animation-fade" href="/">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 171.68 17.05" style="enable-background:new 0 0 171.68 17.05;" xml:space="preserve">
 							<style type="text/css">
 								.st0{fill:#353042;}
@@ -61,7 +62,7 @@
 						</svg></a></div>
 				<div class="uk-navbar-right" id="navigation">
 					<ul class="uk-navbar-nav uk-visible@m">
-						<li class="nav"><a href="#">メニュー</a>
+						<li class="nav"><a href="#"><span>メニュー</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/program/">メニューTOP</a></li>
@@ -72,7 +73,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="nav"><a href="#">スタジオ</a>
+						<li class="nav"><a href="#"><span>スタジオ</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/about/personal/">スタジオ紹介</a></li>
@@ -84,32 +85,39 @@
 						<li class="nav"><a href="/voice/">お客様の声</a></li>
 						<li class="nav"><a href="/news/">ブログ</a></li>
 					</ul>
-					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
+					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" id="toggle-menu" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
 				</div>
 			</nav>
 		</header>
-		<section class="section">
-			<h1>パーソナルトレーニング</h1>
-			<p>一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
-		</section>
-		<div class="personal-container">
-			<article class="uk-article">
-				<h2 class="uk-article-title">カウンセリング</h2><img data-src="../uploads/personal01.jpg" uk-img>
-				<p>レッスン前にお客様の悩み・要望・目標等をヒアリングします。その上で、熟練インストラクターがお客様のカラダの状態を解剖学的に分析し、お客様の悩みの解決や目標の達成に効果的なメニューを考案します。</p>
-				<p>カウンセリングの際は、健康診断の結果や血液検査の結果、またはMRI検査・CT検査等の画像をご持参いただくと、より適切かつ効果的なメニューを提案できます。</p>
-				<p>健康診断等のたびに結果を持参されるお客様も多くいらっしゃいます。</p>
-			</article>
-			<section class="personal uk-background-cover uk-flex uk-flex-center uk-flex-middle" uk-parallax="bgy: -200" style="background-image:url();">
-				<div class="uk-container uk-light"></div>
-			</section>
-			<h2>効果測定</h2>
-			<section class="personal uk-background-cover uk-flex uk-flex-center uk-flex-middle" uk-parallax="bgy: -200" style="background-image:url(../uploads/personal02.jpg);">
-				<div class="uk-container uk-light">
-					<p>レッスン前後に体組計で体全体及び各部位の数値を測定します。</p>
-					<p>体幹部・右腕・左腕・右足・左足のそれぞれの筋肉量・体脂肪率・筋質を測定し、骨量や体水分量の状況も合わせて、トレーニングがしっかり体に反映できているか確認します。測定結果によりトレーニングメニューの追加やトレーニング強度の度合いの変更・トレーニングメソッドの変更を行います。</p>
-					<p>トレーニングごとに体調・体型・姿勢が改善されるのはもちろんですが、ごまかしのきかない測定数値も着実に改善していきます。</p>
+		<div id="container">
+			<section class="herotitle-container personal" style="background-image:url(../uploads/bg_personal.png);">
+				<div class="hero-content">
+					<h1 class="uk-animation-slide-bottom-medium">パーソナルトレーニング</h1>
+					<p class="uk-animation-slide-bottom-medium">一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
 				</div>
 			</section>
+			<div class="uk-container personal">
+				<div class="personal-container">
+					<div class="personal-card" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium">
+						<div class="personal-image"><img src="../uploads/personal01.jpg"></div>
+						<div class="personal-contents">
+							<h2>カウンセリング</h2>
+							<p>レッスン前にお客様の悩み・要望・目標等をヒアリングします。その上で、熟練インストラクターがお客様のカラダの状態を解剖学的に分析し、お客様の悩みの解決や目標の達成に効果的なメニューを考案します。</p>
+							<p>カウンセリングの際は、健康診断の結果や血液検査の結果、またはMRI検査・CT検査等の画像をご持参いただくと、より適切かつ効果的なメニューを提案できます。</p>
+							<p>健康診断等のたびに結果を持参されるお客様も多くいらっしゃいます。</p>
+						</div>
+					</div>
+					<div class="personal-card" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium">
+						<div class="personal-contents">
+							<h2>効果測定</h2>
+							<p>レッスン前後に体組計で体全体及び各部位の数値を測定します。</p>
+							<p>体幹部・右腕・左腕・右足・左足のそれぞれの筋肉量・体脂肪率・筋質を測定し、骨量や体水分量の状況も合わせて、トレーニングがしっかり体に反映できているか確認します。測定結果によりトレーニングメニューの追加やトレーニング強度の度合いの変更・トレーニングメソッドの変更を行います。</p>
+							<p>トレーニングごとに体調・体型・姿勢が改善されるのはもちろんですが、ごまかしのきかない測定数値も着実に改善していきます。</p>
+						</div>
+						<div class="personal-image"><img src="../uploads/personal02.jpg"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<footer id="footer">&copy; Studio Meana</footer>
 		<div id="offcanvas-usage" uk-offcanvas>
@@ -130,9 +138,10 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-		<script src="/assets/js/components.js"></script>
+		<script src="/assets/js/module/uikit.min.js"></script>
+		<script src="/assets/js/module/uikit-icons.min.js"></script>
+		<script src="/assets/js/module/gsap/gsap.min.js"></script>
+		<script src="/assets/js/module/in-view.min.js"></script>
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 	</body>
 </html>

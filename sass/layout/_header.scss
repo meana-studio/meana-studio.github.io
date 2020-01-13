@@ -1,10 +1,14 @@
-#header {	
+#header {
+	.uk-navbar-container {
+		height: 63px;
+	}
 	.uk-navbar {
 		align-items: center;
 		background-color: #FFF;
-		padding: 1.25rem 1rem 1.25rem 2rem;
-		@include mq(xl) {
-			padding: 1rem 0.5rem 1rem 1.25rem;
+		padding: 0 64px;
+		@include mq(md) {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 	.logo {
@@ -13,10 +17,9 @@
 			fill: $black;
 		}
 		svg {
-			height: 16px;
+			height: 14px;
 			outline: none;
 			display: inline-block;
-			
 		}
 		@include mq(xl) {
 			text-align: center;
@@ -28,62 +31,75 @@
 	.navbar-collapse.show {
 		padding-bottom: 3rem;
 	}
-	#navigation {
-		font-size: 1rem;
-	}
 	.uk-navbar-nav {
+		letter-spacing: .1em;
 		align-items: center;
 		li {
 			&.nav {
-				margin-left: 1rem;
-				margin-right: 1rem;
 				> a {
-					font-family: Helvetica, 'Noto Sans JP', sans-serif;
 					display: inline-block;
 					min-height: 0;
-					font-size: 1rem;
-					font-weight: 600;
+					font-size: 1.4rem;
+					font-weight: bold;
 					font-style: normal;
-					color: $black;
-					line-height: 1;
-					padding: 0;
-					margin: 0.5rem 0.25rem;
+					color: #000;
+					padding-left: 1.5em;
+					padding-right: 1.5em;
+					.icon {
+						transform: translateY(-2px);
+						margin-left: 4px;
+						width: 15px;
+					}
 				}
 			}
-		}		
+		}
 	}
 	.contact {
-		margin-left: 1rem;
+		margin-left: 1.5rem;
 		a {
-			color: $black;
-			font-size: .9rem;
-			display: inline-block;
-			vertical-align: middle;
-			line-height: 43px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #FFF;
+			background-color: #666;
+			font-size: 1.2rem;
+			line-height: 1;
 			font-weight: 600;
 			min-height: 0;
+			padding-top: .6em;
+			padding-bottom: .6em;
+			border-radius: 20px;
 			.icon {
+				position: relative;
+				top: 1px;
 				margin-right: .4em;
+				svg {
+					width: 15px;
+				}
 			}
 		}
-	}	
+	}
 }
 
 .uk-navbar-dropdown {
 	border: none;
-	width: 250px;
-	padding: .5em 1.5rem;
+	background-color: #666;
+	padding: .8em 1.5rem;
+	box-shadow: none;
+	border-radius: 4px;
 	.uk-navbar-dropdown-nav {
 		border-radius: 0;
-		text-align: left;	
+		text-align: left;
 		a {
 			color: $black;
 			display: inline-block;
-			padding-top: .5rem;
-			padding-bottom: .5rem;
-			font-size: .9rem;
-			font-weight: 600;	
+			color: #FFF;
+			font-size: 1.3rem;
+			font-weight: 600;
 			text-align: center;
+			&:hover {
+				color: #ddd;
+			}
 		}
 	}
 }
@@ -98,5 +114,65 @@
 	ion-icon {
 		font-size: 2rem;
 		line-height: 1;
+	}
+}
+
+.home #header .uk-navbar {
+	background: none;
+	#toggle-menu {
+		display: none;
+	}
+}
+
+.home .uk-sticky-placeholder {
+	display: none;
+}
+
+.home.animation-end #header {
+	.logo {
+		outline: none;
+		.st0 {
+			fill: #FFF;
+		}
+	}
+	.uk-navbar-nav {
+		li {
+			&.nav {
+				> a {
+					transition: color 0.5s ease-in;
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+
+#offcanvas-usage {
+	.uk-nav-default {
+		font-size: 1.4rem;
+	}
+	.contact {
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #FFF;
+			background-color: #666;
+			font-size: 1.2rem;
+			line-height: 1;
+			font-weight: 600;
+			min-height: 0;
+			padding-top: .6em;
+			padding-bottom: .6em;
+			border-radius: 4px;
+			.icon {
+				position: relative;
+				top: 1px;
+				margin-right: .4em;
+				svg {
+					width: 15px;
+				}
+			}
+		}
 	}
 }

@@ -1,43 +1,131 @@
-#program-container {
-	position: relative;
-	overflow: hidden;
+.herotitle-container {
+	&.personal {
+		padding-top: 48.7%;
+	}
+	&.studio {
+		padding-top: 49.4%;
+	}
+	&.programtop {
+		padding-top: 49.4%;
+	}
+	&.body {
+		padding-top: 51.3%;
+	}
 }
+
+
+.program-container {
+	@include flex(wrap,flex-start,stretch);
+	margin-left: -15px;
+	margin-right: -15px;
+	@include mq(md) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.card {
+		box-sizing: border-box;
+		width: 50%;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 25px;
+		&:nth-of-type(3),
+		&:nth-of-type(4) {
+			margin-bottom: 0;
+		}
+		@include mq(md) {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+
+#personal-cover {
+	z-index: 1;
+	.swiper-container {
+		position: relative;
+		z-index: 1;
+		.swiper-slide {
+			padding-top: 45%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+}
+
+.uk-container {
+	&.studio {
+		margin-top: -10%;
+	}
+	&.personal {
+		margin-top: -10%;
+	}
+	&.programtop {
+		margin-top: -10%;
+	}
+	&.body {
+		margin-top: -10%;
+	}
+}
+
+// プライベートレッスン
 
 .personal-container {
+	position: relative;
+	border-radius: 5px;
+	padding: 24px;
+	z-index: 2;
+	background-color: #FFF;
 	h2 {
 		text-align: center;
-		font-weight: 900;
-		font-size: 2.2rem;
+		font-weight: bold;
+		font-size: 2.8rem;
 		line-height: 1;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		margin-bottom: 24px;
+	}
+	p {
+		font-size: 1.4rem;
+		margin-bottom: 16px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	img {
+		width: 100%;
 	}
 }
 
 
-.personal {
-	padding-top: 30%;
-	padding-bottom: 5%;
-	box-sizing: border-box;
-	.inner {
-		position: relative;
-		z-index: 2;
-		p {
-			margin-bottom: 2rem;
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
+.personal-card {
+	@include flex(nowrap,space-between,center);
+	margin-left: -24px;
+	margin-right: -24px;
+	.personal-image,
+	.personal-contents {
+		padding-left: 24px;
+		padding-right: 24px;
+		box-sizing: border-box;
 	}
-	@include mq(md) {
-		h2 {
-			font-size: 1.4rem;
-			margin-bottom: 1rem;
-		}
-		.inner {
-			p {
-				margin-bottom: 1rem;
-			}
-		}
+	.personal-image {
+		flex-basis: 55%;
+	}
+	.personal-contents {
+		flex: 1;
+	}
+	&:first-of-type {
+		margin-bottom: 48px;
+	}
+}
+
+.body-card {
+	@include flex(nowrap,space-between,stretch);
+	margin-left: -24px;
+	margin-right: -24px;
+	.card {
+		padding-left: 24px;
+		padding-right: 24px;
+		flex-basis: 50%;
 	}
 }

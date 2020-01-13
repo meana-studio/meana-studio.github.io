@@ -19,13 +19,14 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-touch-icon144.png">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css">
+		<link rel="stylesheet" href="/assets/css/uikit.min.css">
+		<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/style.css">
 	</head>
 	<body>
 		<header id="header" uk-sticky>
 			<nav class="uk-navbar-container" uk-navbar>
-				<div class="uk-navbar-left"><a class="logo" href="/">
+				<div class="uk-navbar-left"><a class="logo uk-animation-fade" href="/">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 171.68 17.05" style="enable-background:new 0 0 171.68 17.05;" xml:space="preserve">
 							<style type="text/css">
 								.st0{fill:#353042;}
@@ -61,7 +62,7 @@
 						</svg></a></div>
 				<div class="uk-navbar-right" id="navigation">
 					<ul class="uk-navbar-nav uk-visible@m">
-						<li class="nav"><a href="#">メニュー</a>
+						<li class="nav"><a href="#"><span>メニュー</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/program/">メニューTOP</a></li>
@@ -72,7 +73,7 @@
 								</ul>
 							</div>
 						</li>
-						<li class="nav"><a href="#">スタジオ</a>
+						<li class="nav"><a href="#"><span>スタジオ</span><span class="icon" uk-icon="icon: chevron-down"></span></a>
 							<div class="uk-navbar-dropdown">
 								<ul class="uk-nav uk-navbar-dropdown-nav">
 									<li><a href="/about/personal/">スタジオ紹介</a></li>
@@ -84,73 +85,40 @@
 						<li class="nav"><a href="/voice/">お客様の声</a></li>
 						<li class="nav"><a href="/news/">ブログ</a></li>
 					</ul>
-					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
+					<div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href=""><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" id="toggle-menu" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
 				</div>
 			</nav>
 		</header>
-		<section class="section" id="program-container">
-			<h1>サービスメニュー</h1>
-			<div class="uk-container">
-				<div class="uk-grid uk-flex-stretch uk-child-width-1-2@m">
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="../uploads/home_service_personal.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">パーソナルトレーニング</h3>
-									<p>一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="../uploads/home_service_body.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">ボディメンテナンス</h3>
-									<p>テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="../uploads/home_service_studio.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">スタジオレッスン</h3>
-									<p>５〜15人のグループで行うスタジオ・レッスン。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
-					<div class="uk-margin-large-bottom">
-						<div class="uk-card uk-card-default">
-							<div class="uk-card-media-top">
-								<div class="uk-cover-container"><img src="../uploads/home_service_kids.jpg" uk-cover>
-									<canvas width="400" height="280"></canvas>
-								</div>
-								<div class="uk-card-body">
-									<h3 class="uk-card-title">キッズレッスン</h3>
-									<p>12歳までのキッズ専用のグループレッスン。</p>
-								</div>
-								<div class="uk-card-footer uk-text-center"><a class="uk-button uk-button-primary uk-button-large" href="">もっと見る</a></div>
-							</div>
-						</div>
-					</div>
+		<div id="container">
+			<section class="herotitle-container programtop" style="background-image:url(uploads/bg_programtop.png);">
+				<div class="hero-content">
+					<h1 class="uk-animation-slide-bottom-medium">メニュー</h1>
 				</div>
+			</section>
+			<div class="uk-container programtop">
+				<div class="program-container" uk-height-match="target: .card-body" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40"><a class="card" href="/program/personal/">
+						<div class="card-img" style="background-image:url(../uploads/home_service_personal.jpg);"></div>
+						<div class="card-body">
+							<h3>パーソナルトレーニング</h3>
+							<p>一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング</p>
+						</div></a><a class="card" href="/program/body/">
+						<div class="card-img" style="background-image:url(../uploads/home_service_body.jpg);"></div>
+						<div class="card-body">
+							<h3>ボディメンテナンス</h3>
+							<p>テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。</p>
+						</div></a><a class="card" href="/program/studio/">
+						<div class="card-img" style="background-image:url(../uploads/home_service_studio.jpg);"></div>
+						<div class="card-body">
+							<h3>スタジオレッスン</h3>
+							<p>５〜15人のグループで行うスタジオ・レッスン。</p>
+						</div></a><a class="card" href="/program/kids/">
+						<div class="card-img" style="background-image:url(../uploads/home_service_kids.jpg);"></div>
+						<div class="card-body">
+							<h3>キッズレッスン</h3>
+							<p>12歳までのキッズ専用のグループレッスン。</p>
+						</div></a></div>
 			</div>
-		</section>
+		</div>
 		<footer id="footer">&copy; Studio Meana</footer>
 		<div id="offcanvas-usage" uk-offcanvas>
 			<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push">
@@ -170,9 +138,10 @@
 				</div>
 			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-		<script src="/assets/js/components.js"></script>
+		<script src="/assets/js/module/uikit.min.js"></script>
+		<script src="/assets/js/module/uikit-icons.min.js"></script>
+		<script src="/assets/js/module/gsap/gsap.min.js"></script>
+		<script src="/assets/js/module/in-view.min.js"></script>
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 	</body>
 </html>

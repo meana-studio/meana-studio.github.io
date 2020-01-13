@@ -1,12 +1,14 @@
 header#header(uk-sticky)
 	nav.uk-navbar-container(uk-navbar)
 		div.uk-navbar-left
-			a.logo(href='/')
+			a.logo.uk-animation-fade(href='/')
 				include ./_logo.pug
 		div#navigation.uk-navbar-right
 			ul(class="uk-navbar-nav uk-visible@m")
 				li.nav
-					a(href="#") メニュー
+					a(href="#")
+						span メニュー
+						span.icon(uk-icon="icon: chevron-down")
 					div.uk-navbar-dropdown
 						ul.uk-nav.uk-navbar-dropdown-nav
 							li
@@ -20,7 +22,9 @@ header#header(uk-sticky)
 							li
 								a(href="/program/kids/") キッズレッスン
 				li.nav
-					a(href="#") スタジオ
+					a(href="#")
+						span スタジオ
+						span.icon(uk-icon="icon: chevron-down")
 					div.uk-navbar-dropdown
 						ul.uk-nav.uk-navbar-dropdown-nav
 							li
@@ -37,4 +41,4 @@ header#header(uk-sticky)
 				a.uk-button.uk-button-primary(href='')
 					span.icon(uk-icon="mail")
 					span お問い合わせ
-			a(class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon)
+			a#toggle-menu(class="uk-hidden@m uk-icon uk-navbar-toggle-icon" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon)

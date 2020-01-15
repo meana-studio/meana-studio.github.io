@@ -7,14 +7,12 @@ block var
 	- site_name = 'site_name'
 	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
 block body
-	section.herotitle-container.studio(style="background-image:url(../uploads/bg_studio.png);")
+	section.herotitle-container.kids(style="background-image:url(../uploads/bg_kids.png);")
 		div.hero-content
-			div.en.uk-animation-slide-bottom-medium Studio Lesson
-			h1.uk-animation-slide-bottom-medium スタジオレッスン
-			p.uk-animation-slide-bottom-medium 大人のための５名-15名程度で
-				br
-				| 行うグループレッスン
-	div.uk-container.studio
+			div.en.uk-animation-slide-bottom-medium Kids Lesson
+			h1.uk-animation-slide-bottom-medium キッズレッスン
+			p.uk-animation-slide-bottom-medium 12歳までのキッズ専用のグループレッスン
+	div.uk-container.kids
 		div.schedule-container(uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 50")
 			- for (var x = 0; x < 3; x++)
 				div.schedule
@@ -44,5 +42,5 @@ block body
 							span 13:00~14:00
 						h3 Limber Body &amp; Slow Dance
 						p 代謝UPのための筋肉を使わせるムービング運動と、ストレッチをミックスしたシェイプアップレッスン！
-	script(src="/assets/js/module/swiper.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js")
 	script(src="/assets/js/swiper.js")

@@ -2,6 +2,7 @@
 	padding-top: 24px;
 	padding-bottom: 24px;
 	background-color: #FFF;
+	border-bottom: 1px solid #EBEBEB;
 	//box-shadow: 0px 15px 45px -9px rgba(0,0,0,.2);
 	&:nth-of-type(even) {
 		background-color: #FBFBFB;
@@ -10,38 +11,63 @@
 	h3 {
 		font-size: 1.8rem;
 		font-weight: bold;
+		margin-bottom: 6px;
+		@include mq(md) {
+			font-size: 1.4rem;
+		}
 	}
 	p {
 		font-size: 1.4rem;
+		@include mq(md) {
+			font-size: 1.2rem;
+		}
 	}
 	.content {
-		margin-left: 32px;
 		flex: 1;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 	.s-schedule {
-		position: relative;
+		min-width: 100px;
 		text-align: center;
-		flex-basis: 100px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 	.icons {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
 	ion-icon {
-		//position: absolute;
-		top: 0;
-		left: 0;
-		font-size: 3rem;
+		font-size: 2rem;
+		margin-right: 6px;
 	}
 	.day {
 		text-align: center;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 2rem;
+		font-size: 1.4rem;
 		line-height: 1;
-		margin: 0;
+		padding-top: .2em;
+		padding-bottom: .2em;
+		background-color: #c1d7f7;
+		margin-bottom: 6px;
+		color: #1f3f13;
+		&.sat {
+			background-color: #c6e4a7;
+		}
+		&.sun {
+			background-color: #f6cf8e;
+		}
+		@include mq(md) {
+			font-size: 1.2rem;
+		}
 	}
 	time {
-		font-family: 'Montserrat', sans-serif;
-		font-size: 1.2rem;
+		font-size: 1.6rem;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		margin-bottom: 6px;
+		@include mq(md) {
+			font-size: 1rem;
+		}
 	}
 }

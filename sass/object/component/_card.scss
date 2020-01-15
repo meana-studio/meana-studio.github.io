@@ -6,17 +6,19 @@
 		.point {
 			position: absolute;
 			box-sizing: border-box;
-			padding: .6em;
+			padding: .4em;
 			top: 0;
 			left: 0;
 			font-size: 1.3rem;
 			font-weight: bold;
 			text-align: left;
-			span {
+			ion-icon {
 				position: relative;
 				z-index: 2;
 				background: none;
 				line-height: 1;
+				color: #FFF;
+				font-size: 2rem;
 			}
 			&:after {
 				position: absolute;
@@ -26,8 +28,8 @@
 				width: 0;
 				height: 0;
 				border-style: solid;
-				border-width: 100px 120px 0 0;
-				border-color: #ffffff transparent transparent transparent;
+				border-width: 50px 50px 0 0;
+				border-color: #f6cf8e transparent transparent transparent;
 			}
 		}
 	}
@@ -38,6 +40,7 @@
 		@include mq(md) {
 			padding: 12px;
 		}
+		h2,
 		h3 {
 			font-size: 1.8rem;
 			font-weight: bold;
@@ -49,6 +52,10 @@
 		}
 		p {
 			font-size: 1.4rem;
+			margin-bottom: 1em;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 			@include mq(md) {
 				font-size: 1.1rem;
 			}

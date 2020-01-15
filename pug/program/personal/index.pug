@@ -9,23 +9,25 @@ block var
 block body
 	section.herotitle-container.personal(style="background-image:url(../uploads/bg_personal.png);")
 		div.hero-content
+			div.en.uk-animation-slide-bottom-medium Personal Training
 			h1.uk-animation-slide-bottom-medium パーソナルトレーニング
-			p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング
+			p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
+				br
+				| オーダーメイド・トレーニング
 	div.uk-container.personal
-		div.personal-container
-			div.personal-card(uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium")
-				div.personal-image
-					img(src="../uploads/personal01.jpg")
-				div.personal-contents
+		div.personal-card(uk-height-match="target: .card-body" uk-scrollspy="target: > .card; cls: uk-animation-slide-bottom-medium; delay: 50")
+			div.card
+				div.card-img(style="background-image:url(../uploads/personal01.jpg);")
+				div.card-body
 					h2 カウンセリング
 					p レッスン前にお客様の悩み・要望・目標等をヒアリングします。その上で、熟練インストラクターがお客様のカラダの状態を解剖学的に分析し、お客様の悩みの解決や目標の達成に効果的なメニューを考案します。
 					p カウンセリングの際は、健康診断の結果や血液検査の結果、またはMRI検査・CT検査等の画像をご持参いただくと、より適切かつ効果的なメニューを提案できます。
 					p 健康診断等のたびに結果を持参されるお客様も多くいらっしゃいます。
-			div.personal-card(uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium")
-				div.personal-contents
+			div.card
+				div.card-img(style="background-image:url(../uploads/personal02.jpg);")
+				div.card-body
 					h2 効果測定
 					p レッスン前後に体組計で体全体及び各部位の数値を測定します。
 					p 体幹部・右腕・左腕・右足・左足のそれぞれの筋肉量・体脂肪率・筋質を測定し、骨量や体水分量の状況も合わせて、トレーニングがしっかり体に反映できているか確認します。測定結果によりトレーニングメニューの追加やトレーニング強度の度合いの変更・トレーニングメソッドの変更を行います。
 					p トレーニングごとに体調・体型・姿勢が改善されるのはもちろんですが、ごまかしのきかない測定数値も着実に改善していきます。
 				div.personal-image
-					img(src="../uploads/personal02.jpg")

@@ -12,19 +12,20 @@
 		font-size: 1.8rem;
 		font-weight: bold;
 		margin-bottom: 6px;
+		letter-spacing: normal;
+		@include mq(md) {
+			font-size: 1.6rem;
+		}
+	}
+	p {
+		font-size: 1.6rem;
 		@include mq(md) {
 			font-size: 1.4rem;
 		}
 	}
-	p {
-		font-size: 1.4rem;
-		@include mq(md) {
-			font-size: 1.2rem;
-		}
-	}
 	.content {
 		flex: 1;
-		padding-left: 24px;
+		padding-left: 48px;
 		padding-right: 24px;
 	}
 	.s-schedule {
@@ -38,17 +39,17 @@
 		padding-right: 1em;
 	}
 	ion-icon {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-right: 6px;
 	}
 	.day {
+		display: inline-block;
 		text-align: center;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		line-height: 1;
-		padding-top: .2em;
-		padding-bottom: .2em;
+		padding: .3em 0.8em;
+		border-radius: 2px;
 		background-color: #c1d7f7;
-		margin-bottom: 6px;
 		color: #1f3f13;
 		&.sat {
 			background-color: #c6e4a7;
@@ -61,11 +62,20 @@
 		}
 	}
 	time {
-		font-size: 1.6rem;
+		padding-top: .2em;
+		padding-bottom: .2em;
+		padding-left: 24px;
+		padding-right: 24px;
+		min-width: 120px;
+		font-size: 1.4rem;
 		line-height: 1;
 		display: flex;
 		align-items: center;
-		margin-bottom: 6px;
+		text-align: center;
+		span {
+			position: relative;
+			top: 2px;
+		}
 		@include mq(md) {
 			font-size: 1rem;
 		}

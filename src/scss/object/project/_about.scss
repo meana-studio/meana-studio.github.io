@@ -1,0 +1,99 @@
+.herotitle-container {
+	&.studiotop {
+		padding-top: 49.4%;
+		@include mq(md) {
+			padding-top: 70%;
+		}
+	}
+}
+
+.studio-body {
+	position: relative;
+	z-index: 2;
+	padding: 64px;
+	background-color: #FFF;
+	text-align: left;
+	border-radius: 5px;
+	.point {
+		&:first-of-type {
+			margin-bottom: 64px;
+		}
+	}
+	h2 {
+		font-size: 3rem;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 32px;
+	}
+	p {
+		font-size: 1.6rem;
+		margin-bottom: 24px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	strong {
+		font-weight: bold;
+		color: #000;
+	}
+}
+
+#access {
+	margin-top: 60px;
+	padding-top: 60px;
+	.section-title {
+		margin-bottom: 1.5rem;
+	}
+	.access-body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 32px;
+	}
+	.gmap {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+		border-radius: 10px;
+		iframe,
+		object,
+		embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info {
+		flex: 1;
+		font-size: 2rem;
+		font-weight: bold;
+		.tel {
+			font-size: 4rem;
+		}
+	}
+	.more {
+		text-align: center;
+		a {
+			font-size: 1.4rem;
+			background-color: #666;
+			padding-top: .6em;
+			padding-bottom: .6em;
+			border-radius: 20px;
+			line-height: 1;
+			color: #FFF;
+			text-transform: none;
+			span,
+			ion-icon {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			ion-icon {
+				margin-right: 12px;
+			}
+		}
+	}
+}

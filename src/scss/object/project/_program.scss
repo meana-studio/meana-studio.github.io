@@ -18,10 +18,7 @@
 		}
 	}
 	&.body {
-		padding-top: 51.3%;
-		@include mq(md) {
-			padding-top: 75%;
-		}
+		padding-top: 36.75%;
 	}
 	&.kids {
 		padding-top: 54.8%;
@@ -78,25 +75,19 @@
 
 .uk-container {
 	&.studio {
-		margin-top: -10%;
+		margin-top: -15%;
 	}
 	&.personal {
-		margin-top: -20%;
-		@include mq(md) {
-			margin-top: -10%;
-		}
+		margin-top: -25%;
 	}
 	&.programtop {
-		margin-top: -10%;
+		margin-top: -15%;
 	}
 	&.kids {
-		margin-top: -10%;
+		margin-top: -20%;
 	}
 	&.body {
-		margin-top: -20%;
-		@include mq(md) {
-			margin-top: -10%;
-		}
+		margin-top: -10%;
 	}
 }
 
@@ -127,6 +118,7 @@
 	}
 }
 
+.bodyoptions-container,
 .personal-card,
 .body-card {
 	@include flex(nowrap,space-between,stretch);
@@ -156,4 +148,32 @@
 .menu-section {
 	padding-top: 60px;
 	padding-bottom: 60px;
+}
+
+.option-section {
+	padding-top: 20%;
+	background-image: url(../../program/uploads/bg_option.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: center;
+	background-position-y: bottom;
+	padding-bottom: 60px;
+}
+
+.bodyoptions-container {
+	table {
+		margin-top: 32px;
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		font-size: 1.5rem;
+		th,
+		td {
+			white-space: nowrap;
+			vertical-align: middle;
+		}
+		td:nth-child(2) {
+			text-align: right;
+		}
+	}
 }

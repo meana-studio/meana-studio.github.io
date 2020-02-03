@@ -38,38 +38,103 @@ block body
 				br
 				| パーソナルストレッチ・マッサージ
 			div.schedule-container(uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 50")
-				- for (var x = 0; x < 3; x++)
-					div.schedule
-						div.s-schedule
-							div.day Mon
-						div.content
-							time
-								ion-icon(name="clock")
-								span 9:00~10:00
-							h3 バレエストレッチ
-							p ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-					div.schedule
-						div.s-schedule
-							div.day.sat Sat
-						div.content
-							time
-								ion-icon(name="clock")
-								span 9:00~10:00
-							h3 コアストレッチ &amp; トレーニング
-							p カラダの歪みを整え、リセットするメソッドで、キレイな姿勢と太りにくい体質に！
-					div.schedule
-						div.s-schedule
-							div.day.sun Sun
-						div.content
-							time
-								ion-icon(name="clock")
-								span 13:00~14:00
-							h3 Limber Body &amp; Slow Dance
-							p 代謝UPのための筋肉を使わせるムービング運動と、ストレッチをミックスしたシェイプアップレッスン！
-		section.menu-section
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 60min
+					div.content
+						h3 Active Mssage
+						p チタン製のオリジナルマッサージ器具を使い、深部を温めながら普段動かしにくくなっている筋肉をオイルマッサージしていきます。むくみ・セルライト改善に効果的です。上半身（手のひら・甲を除く）・下半身（足の裏・甲を除く）をバランスよくマッサージする基本のコースです。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 60min
+					div.content
+						h3 Deep Relax Massage
+						p 筋肉に均一な圧をかけ、全身を覆っている筋膜のシワをとる筋膜リリースマッサージ。身体のバランス改善に効果的です。上半身（手のひら・甲を除く）・下半身（足の裏・甲を除く）をバランスよくマッサージします。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 60min
+					div.content
+						h3 Upper Body Massage
+						p 肩のコリ、腰・肩あのハリ、手のこわばり、呼吸器系の弱い方など、特に上半身がつらい方におすすめです。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 60min
+					div.content
+						h3 Lower Body Massage
+						p 腰から下を重点的にほぐし、下半身のラインが気になる方、パフォーマンス向上におすすめのコースです。むくみや冷えが気になる方にも！
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 60min
+					div.content
+						h3 Head Spa &amp; Face Massage
+						p 小顔になりたい方、顔の歪み・むくみ・たるみを改善します。肌荒れ、頭や目が重い、不眠、片頭痛などの症状がある方にもおすすめです。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 100min
+					div.content
+						h3 Special Body Massage
+						p Active MassageとDeep Relax Massageを組み合わせたオイルマッサージです。より効果を高めたいときにおすすめです。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 120min
+					div.content
+						h3 Special Care Massage
+						p ヘッドスパ＆フェイスケア、手のひら・足裏マッサージ等を含めた充実の内容で、全身すべての部位をカバーします。
+				div.schedule
+					time
+						ion-icon(name="clock")
+						span 40min
+					div.content
+						h3 Personal Stretch
+						p お客様一人ひとりの症状や身体の歪みに合わせて、丁寧にほぐしながらストレッチしていきます。柔軟性不足、歪みや運動不足からくる不調に悩む方におすすめです。パーソナルトレーニング前後のストレッチのもおすすめです。
+	section.option-section(uk-parallax="bgy: -100")
+		div.uk-container.option
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Options
 			p.section-p(uk-scrollspy="uk-animation-slide-bottom-medium") テンピュール®製のベッドで行う Studio MEANAオリジナルの
 				br
 				| パーソナルストレッチ・マッサージ追加オプション
+			div.bodyoptions-container(uk-height-match="target: .card-body" uk-scrollspy="target: > .card; cls: uk-animation-slide-bottom-medium; delay: 50")
+				div.card
+					div.card-img(style="background-image:url(../uploads/option01.jpg);")
+					div.card-body
+						h3 Massage Options
+						table
+							tbody
+								tr
+									td ヘッドスパ
+									td(rowspan="5") &yen;3,000（30min）
+								tr
+									td 足裏マッサージ
+								tr
+									td ハンドケア
+								tr
+									td フェイスケア
+								tr
+									td ネック&amp;デコルテケア
+				div.card
+					div.card-img(style="background-image:url(../uploads/option02.jpg);")
+					div.card-body
+						h3 Oil Options
+						table
+							tbody
+								tr
+									td アロマブレンド
+									td &yen;500
+								tr
+									td THANNマッサージオイル
+									td &yen;1,000
+								tr
+									td サンタマリアノヴェッラ マッサージオイル for Body
+									td &yen;1,500
+								tr
+									td サンタマリアノヴェッラ スキンケア for FACE
+									td &yen;1,000
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js")
 	script(src="/assets/js/swiper.js")

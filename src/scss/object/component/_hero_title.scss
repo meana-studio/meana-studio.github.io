@@ -12,7 +12,7 @@
 		left: 0;
 		background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 50%,rgba(0,0,0,0) 100%);
 		@include mq(md) {
-			background: rgba(0,0,0,0.3);
+			background: rgba(0,0,0,0.4);
 		}
 	}
 	.hero-content {
@@ -24,13 +24,13 @@
 		transform: translate(-50%,-40%);
 		box-sizing: border-box;
 		color: #FFF;
-		white-space: nowrap;
+		box-sizing: border-box;
 		//background-color: rgba(0,0,0,0.5);
 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
 		@include mq(md) {
-			width: 100%;
+			width: auto;
 			top: auto;
-			bottom: 25%;
+			bottom: 15px;
 			left: 0;
 			transform: translateX(0);
 			padding-left: 15px;
@@ -63,6 +63,7 @@
 			margin-top: 16px;
 			font-size: 2rem;
 			line-height: 1.4;
+			word-break: break-all;
 			@include mq(md) {
 				margin-top: 8px;
 				font-size: 1.4rem;

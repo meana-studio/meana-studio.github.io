@@ -38,6 +38,10 @@
 		color: #FFF;
 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
 	}
+	@include mq(md) {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
 }
 
 .section-p {
@@ -47,5 +51,12 @@
 	&.white {
 		color: #FFF;
 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
+	}
+	@include mq(md) {
+		font-size: 1.2rem;
+		margin-bottom: 1.5rem;
+		br {
+			display: none;
+		}
 	}
 }

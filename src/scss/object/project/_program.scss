@@ -18,9 +18,9 @@
 		}
 	}
 	&.body {
-		padding-top: 36.75%;
+		padding-top: 46.75%;
 		@include mq(md) {
-			padding-top: 70%;
+			padding-top: 66.65%; //実寸値
 		}
 	}
 	&.kids {
@@ -82,17 +82,32 @@
 		padding-top: 15px;
 	}
 	&.personal {
-		margin-top: 0;
-		padding-top: 15px;
+		margin-top: -15%;
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 15px;
+		}
 	}
 	&.programtop {
 		margin-top: -15%;
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 15px;
+		}
 	}
 	&.kids {
 		margin-top: -20%;
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 15px;
+		}
 	}
 	&.body {
 		margin-top: -12%;
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 15px;
+		}
 	}
 }
 
@@ -156,13 +171,18 @@
 }
 
 .option-section {
-	padding-top: 20%;
+	padding-top: 40%;
 	background-image: url(../../program/uploads/bg_option.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: center;
 	background-position-y: bottom;
 	padding-bottom: 60px;
+	@include mq(md) {
+		background-position: top center;
+		padding-top: 55%;
+		padding-bottom: 30px;
+	}
 }
 
 .bodyoptions-container {
@@ -172,6 +192,9 @@
 		table-layout: fixed;
 		border-collapse: collapse;
 		font-size: 1.5rem;
+		@include mq(md) {
+			font-size: 1rem;
+		}
 		th,
 		td {
 			white-space: nowrap;

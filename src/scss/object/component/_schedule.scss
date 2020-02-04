@@ -8,31 +8,50 @@
 		background-color: #FBFBFB;
 	}
 	@include flex(nowrap,space-between,center);
+	@include mq(md) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
 	h3 {
 		font-size: 1.8rem;
 		font-weight: bold;
 		margin-bottom: 6px;
 		letter-spacing: normal;
 		@include mq(md) {
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 		}
 	}
 	p {
 		font-size: 1.6rem;
 		@include mq(md) {
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 	}
 	.content {
 		flex: 1;
 		padding-left: 48px;
 		padding-right: 24px;
+		box-sizing: border-box;
+		@include mq(md) {
+			flex: none;
+			flex-basis: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-top: 6px;
+		}
 	}
 	.s-schedule {
 		min-width: 100px;
 		text-align: center;
 		padding-left: 24px;
 		padding-right: 24px;
+		@include mq(md) {
+			min-width: auto;
+			padding-left: 15px;
+			padding-right: 0;
+		}
 	}
 	.icons {
 		padding-left: 1em;
@@ -41,6 +60,9 @@
 	ion-icon {
 		font-size: 2.5rem;
 		margin-right: 6px;
+		@include mq(md) {
+			font-size: 1.4rem;
+		}
 	}
 	.day {
 		display: inline-block;
@@ -58,7 +80,8 @@
 			background-color: #f6cf8e;
 		}
 		@include mq(md) {
-			font-size: 1.2rem;
+			font-size: 1rem;
+			margin-right: 15px;
 		}
 	}
 	time {
@@ -77,7 +100,16 @@
 			top: 2px;
 		}
 		@include mq(md) {
+			min-width: auto;
+			flex: 1;
+			padding-left: 0;
+			padding-right: 0;
 			font-size: 1rem;
+		}
+	}
+	> time {
+		@include mq(md) {
+			padding-left: 15px;
 		}
 	}
 }

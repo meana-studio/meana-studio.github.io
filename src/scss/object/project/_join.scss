@@ -1,0 +1,33 @@
+.herotitle-container {
+	&.jointop {
+		padding-top: 49.4%;
+		@include mq(md) {
+			padding-top: 70%;
+		}
+	}
+}
+
+.joincard-container {
+	@include flex(nowrap,space-between,stretch);
+	margin-left: -24px;
+	margin-right: -24px;
+	@include mq(md) {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.card {
+		padding-left: 24px;
+		padding-right: 24px;
+		flex-basis: 50%;
+		&:nth-of-type(1) {
+			transition: transform 0.7s ease-in;
+		}
+		@include mq(md) {
+			padding-left: 0;
+			padding-right: 0;
+			flex-basis: auto;
+			margin-bottom: 24px;
+		}
+	}
+}

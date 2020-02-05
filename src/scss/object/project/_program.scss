@@ -6,25 +6,25 @@
 		}
 	}
 	&.studio {
-		padding-top: 49.4%;
+		padding-top: 61.65%;
 		@include mq(md) {
 			padding-top: 70%;
 		}
 	}
 	&.programtop {
-		padding-top: 49.4%;
+		padding-top: 61.65%;
 		@include mq(md) {
 			padding-top: 70%;
 		}
 	}
 	&.body {
-		padding-top: 46.75%;
+		padding-top: 61.65%;
 		@include mq(md) {
 			padding-top: 66.65%; //実寸値
 		}
 	}
 	&.kids {
-		padding-top: 54.8%;
+		padding-top: 61.65%;
 		@include mq(md) {
 			padding-top: 70%;
 		}
@@ -78,8 +78,11 @@
 
 .uk-container {
 	&.studio {
-		margin-top: 0;
-		padding-top: 15px;
+		margin-top: -15%;
+		@include mq(md) {
+			margin-top: 0;
+			padding-top: 15px;
+		}
 	}
 	&.personal {
 		margin-top: -15%;
@@ -96,14 +99,14 @@
 		}
 	}
 	&.kids {
-		margin-top: -20%;
+		margin-top: -15%;
 		@include mq(md) {
 			margin-top: 0;
 			padding-top: 15px;
 		}
 	}
 	&.body {
-		margin-top: -12%;
+		margin-top: -15%;
 		@include mq(md) {
 			margin-top: 0;
 			padding-top: 15px;
@@ -171,28 +174,43 @@
 }
 
 .option-section {
-	padding-top: 40%;
+	padding-top: 20%;
 	background-image: url(../../program/uploads/bg_option.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: center;
-	background-position-y: bottom;
-	padding-bottom: 60px;
+	background-position-y: -10%;
+	.section-title-m {
+		margin-top: 10%;
+		text-shadow: 0 0 5px rgba(0,0,0,0.7);
+		color: #FFF;
+	}
+	.section-p {
+		margin-bottom: 32px;
+	}
 	@include mq(md) {
-		background-position: top center;
-		padding-top: 55%;
-		padding-bottom: 30px;
+		padding-top: 30%;
+		background-position-y: top;
 	}
 }
 
 .bodyoptions-container {
+	.card {
+		.card-body {
+			h3 {
+				line-height: 1;
+				margin-bottom: 0;
+			}
+		}
+	}
 	table {
-		margin-top: 32px;
+		margin-top: 30px;
 		width: 100%;
 		table-layout: fixed;
 		border-collapse: collapse;
 		font-size: 1.5rem;
 		@include mq(md) {
+			margin-top: 15px;
 			font-size: 1rem;
 		}
 		th,

@@ -147,6 +147,18 @@
 	}
 }
 
+.uk-offcanvas-bar {
+	background-color: #FFF;
+	color: $black;
+	.uk-close {
+		color: $black;
+	}
+	.uk-nav-default li > a {
+		color: $black;
+		font-weight: 500;
+	}
+}
+
 #offcanvas-usage {
 	.uk-nav-default {
 		font-size: 1.4rem;

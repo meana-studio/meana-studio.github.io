@@ -71,3 +71,26 @@
 		}
 	}
 }
+
+.herotitle-container {
+	&.no-image {
+		padding-top: 10%;
+		&:after {
+			display: none;
+		}
+		.hero-content {
+			position: relative;
+			top: auto;
+			left: auto;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: auto;
+			transform: translate(0,0);
+			text-shadow: none;
+			color: $black;
+			h1 {
+				color: $black;
+			}
+		}
+	}
+}

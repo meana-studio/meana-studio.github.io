@@ -1,0 +1,40 @@
+extends ../includes/_layout
+block var
+	- title = 'ブログ | Meana'
+	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
+	- url = 'https://www.meana-studio.com/'
+	- image = 'image'
+	- site_name = 'site_name'
+	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+block body
+	section.herotitle-container.blogtop(style="background-image:url(uploads/bg_blog.jpg);")
+		div.hero-content
+			div.en Blog
+			h1.uk-animation-slide-bottom-medium ブログ
+			p.uk-animation-slide-bottom-medium MEANAが不定期にお送りしているコラムです。
+				br
+				| 身体に関する情報や、MEANAのことについて書いています。
+	div.uk-container
+		div.blog-card-container(uk-height-match="target: .card-body" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
+			- for (var x = 0; x < 3; x++)
+				a.card(href="/program/personal/")
+					div.card-img(style="background-image:url(https://www.meana-studio.com/jolielaide/uploads/vol2.jpg);")
+					div.card-body
+						time 2020/01/01
+						p FOOT LOOSE・リズム感
+				a.card(href="/program/body/")
+					div.card-img(style="background-image:url(https://www.meana-studio.com/jolielaide/uploads/vol1.jpg);")
+					div.card-body
+						time 2020/01/01
+						p 12月スタジオレッスンのお知らせ
+				a.card(href="/program/studio/")
+					div.card-img(style="background-image:url(./uploads/sample1.jpg);")
+					div.card-body
+						time 2020/01/01
+						p ガス展のイベントに参加をして来ました！
+				a.card(href="/program/kids/")
+					div.card-img(style="background-image:url(./uploads/sample2.jpg);")
+					div.card-body
+						time 2020/01/01
+						p キャンペーンのお知らせ
+		include ../includes/_pagination.pug

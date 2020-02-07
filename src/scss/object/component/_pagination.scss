@@ -1,0 +1,27 @@
+.pagination {
+	padding-top: 64px;
+	padding-bottom: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.6rem;
+	.prev {
+		margin-right: 32px;
+	}
+	.next {
+		margin-left: 32px;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		li {
+			line-height: 1;
+			margin-left: 12px;
+			margin-right: 12px;
+			a.current {
+				color: #CCC;
+			}
+		}
+	}
+}

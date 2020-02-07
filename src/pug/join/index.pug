@@ -7,7 +7,7 @@ block var
 	- site_name = 'site_name'
 	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
 block body
-	section.herotitle-container.jointop(style="background-image:url(uploads/bg_studiotop.png);")
+	section.herotitle-container.jointop(style="background-image:url(uploads/bg_join.png);")
 		div.hero-content
 			div.en Studio
 			h1.uk-animation-slide-bottom-medium 入会案内
@@ -15,7 +15,7 @@ block body
 	div.uk-container.jointop
 		div.joincard-container(uk-height-match="target: .card-body" uk-scrollspy="target: > .card; cls: uk-animation-slide-bottom-medium; delay: 50")
 			div.card
-				div.card-img(style="background-image:url(../uploads/option01.jpg);")
+				div.card-img(style="background-image:url(../uploads/home_service_personal.jpg);")
 				div.card-body
 					h3 パーソナルトレーニング
 					table
@@ -31,29 +31,104 @@ block body
 							tr
 								td 60minチケット
 								td 1枚
-								td &yen;6,800 
+								td &yen;6,800
 							tr
-								dt 60minチケット
+								td 60minチケット
 								td 10枚
 								td &yen;62,000
 							tr
-								td 初回カウンセリング 
-								td(colspan="2") &yen;10,000
+								td 初回カウンセリング
+								td
+								td &yen;10,000
 			div.card
-				div.card-img(style="background-image:url(../uploads/option02.jpg);")
+				div.card-img(style="background-image:url(../uploads/home_service_body.jpg);")
 				div.card-body
-					h3 Oil Options
+					h3 ボディメンテナンス
 					table
 						tbody
 							tr
-								td アロマブレンド
-								td &yen;500
+								td 40minチケット
+								td 1枚
+								td &yen;4,600
 							tr
-								td THANNマッサージオイル
-								td &yen;1,000
+								td 40minチケット
+								td 10枚
+								td &yen;43,000
 							tr
-								td サンタマリアノヴェッラ マッサージオイル for Body
-								td &yen;1,500
+								td 60minチケット
+								td 1枚
+								td &yen;6,800
 							tr
-								td サンタマリアノヴェッラ スキンケア for FACE
-								td &yen;1,000
+								td 60minチケット
+								td 10枚
+								td &yen;62,000
+							tr
+								td 初回カウンセリング
+								td
+								td &yen;10,000
+			div.card
+				div.card-img(style="background-image:url(../uploads/home_service_studio.jpg);")
+				div.card-body
+					h3 スタジオレッスン
+					table
+						tbody
+							tr
+								td スタジオレッスンチケット
+								td 5枚
+								td &yen;7,500
+							tr
+								td スタジオレッスンチケット
+								td 10枚
+								td &yen;12,500
+							tr
+								td スタジオレッスンチケット
+								td 20枚
+								td &yen;20,000
+							tr
+								td スタジオレッスンチケット
+								td 50枚
+								td &yen;25,000
+							tr
+								td ビジターチケット
+								td 1枚
+								td &yen;2,000
+			div.card
+				div.card-img(style="background-image:url(../uploads/home_service_kids.jpg);")
+				div.card-body
+					h3 キッズレッスン
+					table
+						tbody
+							tr
+								td スタジオレッスンチケット
+								td 5枚
+								td &yen;7,500
+							tr
+								td スタジオレッスンチケット
+								td 10枚
+								td &yen;12,500
+							tr
+								td スタジオレッスンチケット
+								td 20枚
+								td &yen;20,000
+							tr
+								td スタジオレッスンチケット
+								td 50枚
+								td &yen;25,000
+							tr
+								td ビジターチケット
+								td 1枚
+								td &yen;2,000
+	section.join-fee
+		div.join-fee-container
+			div.uk-container
+				h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") 注意事項
+				ul
+					li 上記料金は全て税抜表示となっております。
+					li 各種チケットは、購入したお客様本人のみがご利用になれます。
+					li チケット最終購入日から１年間、上記チケットのいずれも購入がない場合、自動退会となります。
+					li チケットの有効期限は、チケットの購入した日の属する月の末日から６ヶ月間となります。
+						br
+						| （例）2018年7月12日に購入→有効期限2019年1月末日
+					li スタジオレッスンチケット50枚の有効期限のみチケット購入した日の属する月の末日から３ヶ月間となっております。
+						br
+						| こちらのチケットは、有効期間の短いスペシャルオファーですのでご注意ください。

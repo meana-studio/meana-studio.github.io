@@ -18,6 +18,14 @@
 			padding-top: 70%;
 		}
 	}
+	&.voiceentry {
+		padding-top: 30%;
+		@include mq(md) {
+			background-size: contain;
+			background-position-y: top;
+			padding-top: 60%;
+		}
+	}
 }
 
 .voice-card-container {
@@ -59,6 +67,135 @@
 			.name {
 				font-size: 1.1rem;
 			}
+		}
+	}
+	&.relative {
+		margin-top: 0;
+		.card {
+			flex-basis: 25%;
+			@include mq(md) {
+				flex-basis: 50%;
+			}
+		}
+	}
+}
+
+.voice-head {
+	box-sizing: border-box;
+	padding: 64px 32px;
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq(md) {
+		width: auto;
+		padding: 15px 0;
+		font-size: 1.1rem;
+	}
+	h1 {
+		font-size: 3.3rem;
+		line-height: 1.4;
+		font-weight: bold;
+		@include mq(md) {
+			font-size: 2rem;
+		}
+	}
+	> img {
+		display: block;
+		width: 100%;
+		margin-bottom: 32px;
+		@include mq(md) {
+			margin-bottom: 16px;
+		}
+	}
+	figure {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-right: 32px;
+		img {
+			border-radius: 100%;
+			overflow: hidden;
+			width: 60px;
+			height: 60px;
+			display: block;
+			box-shadow: 0px 15px 45px -9px rgba(0,0,0,.2);
+			@include mq(md) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		figcaption {
+			white-space: nowrap;
+			margin-left: 12px;
+			font-size: 1.4rem;
+			font-weight: bold;
+			@include mq(md) {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+.voice-meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 32px;
+	@include mq(md) {
+		margin-bottom: 16px;
+	}
+	.socials {
+		li {
+			margin-left: 12px;
+		}
+	}
+}
+
+.voice-body {
+	box-sizing: border-box;
+	padding: 0 32px;
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.7rem;
+	@include mq(md) {
+		width: auto;
+		padding: 15px 0;
+		font-size: 1.1rem;
+	}
+	h2,
+	p {
+		margin-bottom: 32px;
+		@include mq(md) {
+			margin-bottom: 16px;
+		}
+	}
+	h2 {
+		font-weight: bold;
+		font-size: 2rem;
+		@include mq(md) {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.relative-voice {
+	padding-top: 32px;
+	padding-left: 64px;
+	padding-right: 64px;
+	padding-bottom: 32px;
+	background-color: #FFF;
+	@include mq(md) {
+		padding: 24px 15px;
+	}
+	h2 {
+		font-weight: bold;
+		font-size: 2rem;
+		line-height: 1;
+		margin-bottom: 32px;
+		@include mq(md) {
+			font-size: 1.4rem;
+			margin-bottom: 16px;
 		}
 	}
 }

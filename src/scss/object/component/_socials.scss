@@ -1,0 +1,13 @@
+.socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	li {
+		svg {
+			width: 30px;
+			@include mq(md) {
+				width: 20px;
+			}
+		}
+	}
+}

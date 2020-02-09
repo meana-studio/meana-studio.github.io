@@ -117,18 +117,14 @@
 	}
 }
 
-.home #header .uk-navbar {
+#header.home .uk-navbar {
 	background: none;
 	#toggle-menu {
 		display: none;
 	}
 }
 
-.home .uk-sticky-placeholder {
-	display: none;
-}
-
-.home.animation-end #header {
+.animation-end #header.home {
 	.logo {
 		outline: none;
 		.st0 {
@@ -148,7 +144,7 @@
 }
 
 .uk-offcanvas-bar {
-	background-color: #FFF;
+	background-color: rgba(255,255,255,0.95);
 	color: $black;
 	.uk-close {
 		color: $black;

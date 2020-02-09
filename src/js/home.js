@@ -1,6 +1,9 @@
 const el = document.getElementById('main-cover-image')
 const message = document.getElementById('message')
+const header = document.getElementById('header')
 const scroll = document.getElementById('scroll')
+
+header.classList.add('home')
 
 // カバー画像
 TweenLite.set(el, {
@@ -49,11 +52,10 @@ function appendScroll() {
 	});
 }
 
-inView.offset(200)
 inView('#main-cover')
 .on('enter', el=>{
-	document.body.classList.add('home')
+	header.classList.add('home')
 })
 .on('exit', el=>{
-	document.body.classList.remove('home')
+	header.classList.remove('home')
 })

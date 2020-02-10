@@ -1,0 +1,98 @@
+extends ../includes/_layout
+block var
+	- title = 'ブログを見た目確認のためのテスト投稿、こちらはタイトルです。 | Meana'
+	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
+	- url = 'https://www.meana-studio.com/'
+	- image = 'image'
+	- site_name = 'site_name'
+	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+block body
+	div.uk-container
+		section.blog-head
+			img.uk-animation-fade(src="https://www.meana-studio.com/jolielaide/uploads/vol1.jpg")
+			div.blog-meta.uk-animation-slide-bottom-medium
+				div.blog-person
+					figure
+						img(src="uploads/mori.jpg")
+						figcaption 森 和賀奈
+				ul.socials
+					li
+						a(href="")
+							i(uk-icon="icon: twitter; ratio: 2")
+					li
+						a(href="")
+							i(uk-icon="icon: facebook; ratio: 2")
+			h1.uk-animation-slide-bottom-medium ブログを見た目確認のためのテスト投稿、こちらはタイトルです。
+		.blog-body(uk-scrollspy="target: *; cls: uk-animation-slide-bottom-medium; delay: 40")
+			h2 見出し大
+			h3 見出し中
+			p 📢キャンペーンのお知らせです📢
+			p MEANAマッサージに新しく筋膜リリースマッサージが入りました！
+			p 皆様にお試しいただきたいと思い、キャンペーンを行います✨
+			p 11月1日〜11月29日まで行っておりますので、この機会にぜひ一度試してみてください！
+			p フェイスストレッチ(骨格調整)も行なっておりますので、興味のあるかたはお気軽にお問い合わせ下さい☺️
+			h2 動画埋め込み
+			.iframe
+				iframe.youtube(width="560" height="315" src="https://www.youtube.com/embed/t8JcHqAHQD0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+			h3 画像
+			img(src="https://www.meana-studio.com/jolielaide/uploads/vol2.jpg" uk-img)
+			h2 引用
+			blockquote そんな訳で、子供から一人の女性へ変身中の娘に 対して負けてられない！ 若さから連想すること...
+			blockquote で、代謝UPのポイント背骨を支えている脊柱起立筋群を目覚めさせること。
+				p 脊柱起立筋群はその名の通り立ち上がるための筋肉です。
+				p 一日中背骨を支え続けるので、姿勢を保つためにエネルギーを消費します。 なので、姿勢を改善できれば、代謝を高め太りにくい体質へ導いてくれるのです。
+				p また、更に見た目の印象もかなり変わります。
+					br
+					| 背骨を支えられないためダラッと老けた印象から スラっと胸の上がった若々しい立ち姿に変化します。
+			h2 箇条書き（数字）
+			ol
+				li 図の場所に向かって代謝を上げるストレッチを５分ほど
+				li 図の場所を中心にその周辺の筋肉を連動させるストレッチを５分
+				li 図の場所が目覚めたことを確認して、全身を動かすストレッチを１５分～２０分
+			h2 箇条書き（点）
+			ul
+				li よく眠るためめっめえめえええ
+				li 運動時は交感神経が働き、運動後しばらくすると副交感神経に
+				li 切り替わり睡眠に適した状態になり、眠さを感じます。
+			h3 表組み
+			table
+				tbody
+					tr
+						th 1列目の文字
+						th 2列目の文字
+						th 3列目の文字
+					tr
+						td 1列目の文字
+						td 2列目の文字
+						td 3列目の文字
+					tr
+						td 1列目の文字
+						td 2列目の文字
+						td 3列目の文字
+					tr
+						td 1列目の文字
+						td 2列目の文字
+						td 3列目の文字
+	div.relative-blog
+		h2 その他の記事
+		div.blog-card-container.relative(uk-height-match="target: .card-body" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
+			a.card(href="blog.html")
+				div.card-img(style="background-image:url(https://www.meana-studio.com/jolielaide/uploads/vol2.jpg);")
+				div.card-body
+					time 2020/01/01
+					p FOOT LOOSE・リズム感
+			a.card(href="blog.html")
+				div.card-img(style="background-image:url(https://www.meana-studio.com/jolielaide/uploads/vol1.jpg);")
+				div.card-body
+					time 2020/01/01
+					p 12月スタジオレッスンのお知らせ
+			a.card(href="blog.html")
+				div.card-img(style="background-image:url(./uploads/sample1.jpg);")
+				div.card-body
+					time 2020/01/01
+					p ガス展のイベントに参加をして来ました！
+			a.card(href="blog.html")
+				div.card-img(style="background-image:url(./uploads/sample2.jpg);")
+				div.card-body
+					time 2020/01/01
+					p キャンペーンのお知らせ

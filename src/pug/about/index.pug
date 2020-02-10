@@ -71,6 +71,36 @@ block body
 					div.card-body
 						h3 山田 花子
 						.en Hanako Yamada
+		#gallery
+			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
+			div#gallery-container(uk-slider="center: true,finite: true,sets: true")
+				.uk-position-relative
+					.uk-slider-container
+						ul(class="uk-slider-items uk-grid uk-child-width-1-2@s uk-child-width-1-1")
+							li
+								img(src="uploads/gallery01.jpg" uk-img)
+								div.uk-panel スタジオ外観
+							li
+								img(src="uploads/gallery07.jpg" uk-img)
+								div.uk-panel 受付・エントランス
+							li
+								img(src="uploads/gallery02.jpg" uk-img)
+								div.uk-panel ボディメンテンナンスルーム
+							li
+								img(src="uploads/gallery03.jpg" uk-img)
+								div.uk-panel 渡り廊下
+							li
+								img(src="uploads/gallery04.jpg" uk-img)
+								div.uk-panel マシン
+							li
+								img(src="uploads/gallery05.jpg" uk-img)
+								div.uk-panel トレーニングルーム（1）
+							li
+								img(src="uploads/gallery06.jpg" uk-img)
+								div.uk-panel トレーニングルーム（2）
+						a.prev(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous")
+						a.next(class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next")
+					ul.uk-slider-nav.uk-dotnav
 		#access
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Access Map
 			p.section-p(uk-scrollspy="uk-animation-slide-bottom-medium") スタジオまでのアクセス

@@ -118,10 +118,14 @@
 }
 
 #header.home .uk-navbar {
-	background: none;
+	background: transparent;
 	#toggle-menu {
 		display: none;
 	}
+}
+
+#header.home + .uk-sticky-placeholder {
+	display: none;
 }
 
 .animation-end #header.home {

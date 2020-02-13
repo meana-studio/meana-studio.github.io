@@ -14,7 +14,7 @@ block body
 				br
 				| ご質問がある方は下記のフォームよりお問い合わせ下さい。
 		.form-body
-			form(action="")
+			form(action="" uk-scrollspy="uk-animation-slide-bottom-medium")
 				fieldset
 					legend お名前
 					input(type="text" placeholder="例）　山田太郎")
@@ -38,6 +38,7 @@ block body
 						br
 						| ご入力いだいたお客様の個人情報について、
 						br
-						| プライバシーポリシーに従い取り扱います。
+						| 
+						a(href="/privacy/" target="_blank") プライバシーポリシーに従い取り扱います。
 				.submit
 					input(type="submit" value="同意して確認画面へ")

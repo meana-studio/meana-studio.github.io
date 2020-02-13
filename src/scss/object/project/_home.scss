@@ -1,10 +1,12 @@
 #main-cover {
+	margin-top: -63px;
 	height: 100vh;
 	box-sizing: border-box;
+	@include mq(md) {
+		height: spvh(100);
+	}
 	#main-cover-image {
 		position: absolute;
-		background-image: url(../../uploads/home_cover.jpg);
-		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		z-index: 1;
@@ -12,9 +14,14 @@
 		height: 100%;
 		opacity: 0;
 		visibility: hidden;
+		@include mq(mdm) {
+			background-position: center center;
+			background-image: url(../../uploads/home_cover.jpg);
+		}
 		@include mq(md) {
 			background-position: center bottom;
 			background-image: url(../../uploads/home_cover_sp.jpg);
+			height: spvh(100);
 		}
 		&.active {
 			&:after {
@@ -35,22 +42,30 @@
 		background-color: rgba(0,0,0,0.4);
 		z-index: 2;
 		opacity: 0;
+		@include mq(md) {
+			height: spvh(100);
+		}
 	}
 	#main-cover-image.active + #cover-bg {
 		opacity: 1;
 	}
 	.cover-content {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
 		z-index: 3;
+		@include mq(mdm) {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
 		@include mq(md) {
 			width: 100%;
+			height: spvh(100);
 			text-align: center;
-			top: 35%;
+			top: -100px;
 			left: 0;
-			transform: translate(0,0);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 		h1 {
 			display: none;
@@ -60,7 +75,15 @@
 			text-align: center;
 			color: $black;
 			@include mq(md) {
-				font-size: 1.7rem;
+				font-size: 2rem;
+			}
+		}
+		.sp {
+			@include mq(mdm) {
+				display: none;
+			}
+			@include mq(md) {
+				display: block;
 			}
 		}
 	}
@@ -162,13 +185,17 @@
 		}
 	}
 	.section-title {
-		color: #FFF;
+		//color: #FFF;
 		text-shadow: 0 0 10px rgba(0,0,0,0.5);
 	}
 	.about-container {
 		margin-left: -10px;
 		margin-right: -10px;
 		@include flex(wrap,flex-start,stretch);
+		@include mq(md) {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
 	}
 	.card {
 		width: 25%;
@@ -182,6 +209,8 @@
 		}
 		@include mq(md) {
 			width: 50%;
+			padding-left: 5px;
+			padding-right: 5px;
 			margin-bottom: 25px;
 		}
 		.card-img {

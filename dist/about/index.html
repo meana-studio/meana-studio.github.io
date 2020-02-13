@@ -20,9 +20,11 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/uikit.min.css">
 		<link rel="stylesheet" href="https://use.typekit.net/mty5bcn.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/swiper.css">
 	</head>
 	<body>
 		<header id="header" uk-sticky>
@@ -86,7 +88,7 @@
 		<div id="container">
 			<section class="herotitle-container studiotop" style="background-image:url(uploads/bg_studiotop.png);">
 				<div class="hero-content">
-					<div class="en">Studio</div>
+					<div class="uk-animation-slide-bottom-medium en">Studio</div>
 					<h1 class="uk-animation-slide-bottom-medium">スタジオ紹介</h1>
 					<p class="uk-animation-slide-bottom-medium">創業1999年、解剖学に基づいたバレエメソッドで<br>カラダを根本から整えるパーソナル・トレーニング・スタジオ</p>
 				</div>
@@ -113,7 +115,7 @@
 				</div>
 				<div id="staff">
 					<h2 class="section-title-m" uk-scrollspy="uk-animation-slide-bottom-medium">Staff</h2>
-					<div class="staff-card-container">
+					<div class="staff-card-container" uk-scrollspy="target: &gt; .card; cls: uk-animation-slide-bottom-medium; delay: 50">
 						<div class="card">
 							<div class="card-img" style="background-image:url(./uploads/asami.jpg);"></div>
 							<div class="card-body">
@@ -160,36 +162,32 @@
 				</div>
 				<div id="gallery">
 					<h2 class="section-title-m" uk-scrollspy="uk-animation-slide-bottom-medium">Gallery</h2>
-					<div id="gallery-container" uk-slider="center: true,finite: true,sets: true">
-						<div class="uk-position-relative">
-							<div class="uk-slider-container">
-								<ul class="uk-slider-items uk-grid uk-child-width-1-2@s uk-child-width-1-1">
-									<li><img src="uploads/gallery01.jpg" uk-img>
-										<div class="uk-panel">スタジオ外観</div>
-									</li>
-									<li><img src="uploads/gallery07.jpg" uk-img>
-										<div class="uk-panel">受付・エントランス</div>
-									</li>
-									<li><img src="uploads/gallery02.jpg" uk-img>
-										<div class="uk-panel">ボディメンテンナンスルーム</div>
-									</li>
-									<li><img src="uploads/gallery03.jpg" uk-img>
-										<div class="uk-panel">渡り廊下</div>
-									</li>
-									<li><img src="uploads/gallery04.jpg" uk-img>
-										<div class="uk-panel">マシン</div>
-									</li>
-									<li><img src="uploads/gallery05.jpg" uk-img>
-										<div class="uk-panel">トレーニングルーム（1）</div>
-									</li>
-									<li><img src="uploads/gallery06.jpg" uk-img>
-										<div class="uk-panel">トレーニングルーム（2）</div>
-									</li>
-								</ul><a class="prev uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a><a class="next uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-							</div>
-							<ul class="uk-slider-nav uk-dotnav"></ul>
-						</div>
+					<div class="swiper-container" id="gallery-container" uk-scrollspy="uk-animation-slide-bottom-medium">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><img src="uploads/gallery01.jpg" uk-img>
+								<h3>スタジオ外観</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery07.jpg" uk-img>
+								<h3>受付・エントランス</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery02.jpg" uk-img>
+								<h3>ボディメンテンナンスルーム</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery03.jpg" uk-img>
+								<h3>渡り廊下</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery04.jpg" uk-img>
+								<h3>マシン</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery05.jpg" uk-img>
+								<h3>トレーニングルーム（1）</h3>
+							</li>
+							<li class="swiper-slide"><img src="uploads/gallery06.jpg" uk-img>
+								<h3>トレーニングルーム（2）</h3>
+							</li>
+						</ul><a class="swiper-button-prev" href="#"></a><a class="swiper-button-next" href="#"></a>
 					</div>
+					<ul class="swiper-pagination"></ul>
 				</div>
 				<div id="access">
 					<h2 class="section-title-m" uk-scrollspy="uk-animation-slide-bottom-medium">Access Map</h2>
@@ -227,5 +225,8 @@
 		</div>
 		<script src="/assets/js/module/uikit.min.js"></script>
 		<script src="/assets/js/module/uikit-icons.min.js"></script>
+		<script src="/assets/js/common.js"></script>
+		<script src="/assets/js/module/swiper.min.js"></script>
+		<script src="/assets/js/swiper.js"></script>
 	</body>
 </html>

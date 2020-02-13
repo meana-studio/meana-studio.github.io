@@ -23,9 +23,11 @@ html(lang="ja")
 			link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese" rel="stylesheet")
 			link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
 			link(href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet")
+			link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 			link(rel="stylesheet" href="/assets/css/uikit.min.css")
 			link(rel="stylesheet" href="https://use.typekit.net/mty5bcn.css")
 			link(rel='stylesheet', href="/assets/css/style.css")
+		block end_link
 	body(class=bodyclass)
 		include ./_header.pug
 		div#container
@@ -60,4 +62,5 @@ html(lang="ja")
 							span お問い合わせ
 		script(src="/assets/js/module/uikit.min.js")
 		script(src="/assets/js/module/uikit-icons.min.js")
+		script(src="/assets/js/common.js")
 		block end_of_body

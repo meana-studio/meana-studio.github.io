@@ -20,6 +20,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&amp;display=swap&amp;subset=japanese" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/css/uikit.min.css">
 		<link rel="stylesheet" href="https://use.typekit.net/mty5bcn.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
@@ -90,7 +91,7 @@
 					<p class="uk-animation-slide-bottom-medium">MEANAについて詳しく知りたい、入会、または体験してみたいなど<br>ご質問がある方は下記のフォームよりお問い合わせ下さい。</p>
 				</section>
 				<div class="form-body">
-					<form action="">
+					<form action="" uk-scrollspy="uk-animation-slide-bottom-medium">
 						<fieldset>
 							<legend>お名前</legend>
 							<input type="text" placeholder="例）　山田太郎">
@@ -116,7 +117,7 @@
 							<textarea></textarea>
 						</fieldset>
 						<div class="privacy">
-							<p>MEANA STUDIOへのお問い合わせに際し、<br>ご入力いだいたお客様の個人情報について、<br>プライバシーポリシーに従い取り扱います。</p>
+							<p>MEANA STUDIOへのお問い合わせに際し、<br>ご入力いだいたお客様の個人情報について、<br> <a href="/privacy/" target="_blank">プライバシーポリシーに従い取り扱います。</a></p>
 						</div>
 						<div class="submit">
 							<input type="submit" value="同意して確認画面へ">
@@ -147,5 +148,6 @@
 		</div>
 		<script src="/assets/js/module/uikit.min.js"></script>
 		<script src="/assets/js/module/uikit-icons.min.js"></script>
+		<script src="/assets/js/common.js"></script>
 	</body>
 </html>

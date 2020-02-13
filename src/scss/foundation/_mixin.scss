@@ -4,6 +4,10 @@ $text-gray: #CCC;
 $gray: #ebebeb;
 $bg-gray: #f4f4f4;
 
+// SP viewport height
+@function spvh($vh: 100, $adjust: 0px) {
+	@return calc((var(--vh, 1vh) * #{$vh}) + #{$adjust});
+}
 
 // media query
 $breakpoints: (

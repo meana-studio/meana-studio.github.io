@@ -6,10 +6,12 @@ block var
 	- image = 'image'
 	- site_name = 'site_name'
 	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+block end_link
+	link(rel='stylesheet', href="/assets/css/swiper.css")
 block body
 	section.herotitle-container.studiotop(style="background-image:url(uploads/bg_studiotop.png);")
 		div.hero-content
-			div.en Studio
+			div.uk-animation-slide-bottom-medium.en Studio
 			h1.uk-animation-slide-bottom-medium スタジオ紹介
 			p.uk-animation-slide-bottom-medium 創業1999年、解剖学に基づいたバレエメソッドで
 				br
@@ -40,7 +42,7 @@ block body
 				p(uk-scrollspy="uk-animation-slide-bottom-medium") カラダを根本から変えたい方、是非、当スタジオにお越しください。
 		#staff
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Staff
-			.staff-card-container
+			.staff-card-container(uk-scrollspy="target: > .card; cls: uk-animation-slide-bottom-medium; delay: 50")
 				.card
 					div.card-img(style="background-image:url(./uploads/asami.jpg);")
 					div.card-body
@@ -73,34 +75,32 @@ block body
 						.en Hanako Yamada
 		#gallery
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
-			div#gallery-container(uk-slider="center: true,finite: true,sets: true")
-				.uk-position-relative
-					.uk-slider-container
-						ul(class="uk-slider-items uk-grid uk-child-width-1-2@s uk-child-width-1-1")
-							li
-								img(src="uploads/gallery01.jpg" uk-img)
-								div.uk-panel スタジオ外観
-							li
-								img(src="uploads/gallery07.jpg" uk-img)
-								div.uk-panel 受付・エントランス
-							li
-								img(src="uploads/gallery02.jpg" uk-img)
-								div.uk-panel ボディメンテンナンスルーム
-							li
-								img(src="uploads/gallery03.jpg" uk-img)
-								div.uk-panel 渡り廊下
-							li
-								img(src="uploads/gallery04.jpg" uk-img)
-								div.uk-panel マシン
-							li
-								img(src="uploads/gallery05.jpg" uk-img)
-								div.uk-panel トレーニングルーム（1）
-							li
-								img(src="uploads/gallery06.jpg" uk-img)
-								div.uk-panel トレーニングルーム（2）
-						a.prev(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous")
-						a.next(class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next")
-					ul.uk-slider-nav.uk-dotnav
+			div#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
+				ul.swiper-wrapper
+					li.swiper-slide
+						img(src="uploads/gallery01.jpg" uk-img)
+						h3 スタジオ外観
+					li.swiper-slide
+						img(src="uploads/gallery07.jpg" uk-img)
+						h3 受付・エントランス
+					li.swiper-slide
+						img(src="uploads/gallery02.jpg" uk-img)
+						h3 ボディメンテンナンスルーム
+					li.swiper-slide
+						img(src="uploads/gallery03.jpg" uk-img)
+						h3 渡り廊下
+					li.swiper-slide
+						img(src="uploads/gallery04.jpg" uk-img)
+						h3 マシン
+					li.swiper-slide
+						img(src="uploads/gallery05.jpg" uk-img)
+						h3 トレーニングルーム（1）
+					li.swiper-slide
+						img(src="uploads/gallery06.jpg" uk-img)
+						h3 トレーニングルーム（2）
+				a.swiper-button-prev(href="#")
+				a.swiper-button-next(href="#")
+			ul.swiper-pagination
 		#access
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Access Map
 			p.section-p(uk-scrollspy="uk-animation-slide-bottom-medium") スタジオまでのアクセス
@@ -117,3 +117,6 @@ block body
 						span GoogleMapで地図を見る
 			div.gmap(uk-scrollspy="uk-animation-slide-bottom-medium")
 				iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12915.822932338566!2d139.5851111!3d35.9725077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x71c4cdcba88e623f!2sStudio%20MEANA%20-Personal%20Training%20%26%20Stretching-!5e0!3m2!1sja!2sjp!4v1579230226387!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="")
+block end_of_body
+	script(src="/assets/js/module/swiper.min.js")
+	script(src="/assets/js/swiper.js")

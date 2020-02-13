@@ -117,35 +117,45 @@
 	}
 }
 
-#header.home .uk-navbar {
-	background: transparent;
-	#toggle-menu {
-		display: none;
-	}
-}
-
-#header.home + .uk-sticky-placeholder {
-	display: none;
-}
-
-.animation-end #header.home {
-	.logo {
-		outline: none;
-		.st0 {
-			fill: #FFF;
+.home {
+	#header {
+		.uk-navbar {
+			background: transparent;
+			#toggle-menu {
+				display: none;
+			}
 		}
 	}
-	.uk-navbar-nav {
-		li {
-			&.nav {
-				> a {
-					transition: color 0.5s ease-in;
-					color: #FFF;
+	.uk-sticky-placeholder {
+		//display: none;
+	}
+	&.animation-end {
+		#header {
+			.logo {
+				outline: none;
+				.st0 {
+					transition: all 0.6s;
+					fill: #FFF;
+				}
+			}
+			.uk-navbar-nav {
+				li {
+					&.nav {
+						> a {
+							transition: all 0.6s;
+							transition: color 0.5s ease-in;
+							color: #FFF;
+						}
+					}
 				}
 			}
 		}
 	}
 }
+
+
+
+
 
 .uk-offcanvas-bar {
 	background-color: rgba(255,255,255,0.95);

@@ -6,6 +6,10 @@
 		align-items: center;
 		background-color: #FFF;
 		padding: 0 64px;
+		@include mq(xxl) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
 		@include mq(md) {
 			padding-left: 15px;
 			padding-right: 15px;

@@ -27,6 +27,13 @@
 		box-sizing: border-box;
 		//background-color: rgba(0,0,0,0.5);
 		text-shadow: 0 0 5px rgba(0,0,0,0.7);
+		@include mq(xxl) {
+			width: 100%;
+			left: 0;
+			transform: translate(0,-40%);
+			padding-left: 24px;
+			padding-right: 24px;
+		}
 		@include mq(md) {
 			width: auto;
 			top: auto;

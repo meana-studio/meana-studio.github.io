@@ -4,6 +4,9 @@
 		.hero-content {
 			top: 50%;
 			transform: translate(-50%,-50%);
+			@include mq(xxl) {
+				transform: translate(0,-50%);
+			}
 			@include mq(md) {
 				width: auto;
 				top: auto;

@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="/assets/css/uikit.min.css">
 		<link rel="stylesheet" href="https://use.typekit.net/mty5bcn.css">
 		<link rel="stylesheet" href="/assets/css/style.css">
+		<link rel="stylesheet" href="/assets/css/swiper.css">
 	</head>
 	<body>
 		<header id="header" uk-sticky>
@@ -185,9 +186,36 @@
 						</div>
 					</div>
 				</div>
+				<div id="gallery">
+					<h2 class="section-title-m" uk-scrollspy="uk-animation-slide-bottom-medium">Gallery</h2>
+					<div class="swiper-container" id="gallery-container" uk-scrollspy="uk-animation-slide-bottom-medium">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"><img src="/about/uploads/gallery01.jpg" uk-img>
+								<h3>スタジオ外観</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery07.jpg" uk-img>
+								<h3>受付・エントランス</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery02.jpg" uk-img>
+								<h3>ボディメンテンナンスルーム</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery03.jpg" uk-img>
+								<h3>渡り廊下</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery04.jpg" uk-img>
+								<h3>マシン</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery05.jpg" uk-img>
+								<h3>トレーニングルーム（1）</h3>
+							</li>
+							<li class="swiper-slide"><img src="/about/uploads/gallery06.jpg" uk-img>
+								<h3>トレーニングルーム（2）</h3>
+							</li>
+						</ul><a class="swiper-button-prev" href="#"></a><a class="swiper-button-next" href="#"></a>
+					</div>
+					<ul class="swiper-pagination"></ul>
+				</div>
 			</div>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-			<script src="/assets/js/swiper.js"></script>
 		</div>
 		<footer id="footer">&copy; Studio Meana</footer>
 		<div id="offcanvas-usage" uk-offcanvas="mode: push;overlay: true">
@@ -212,5 +240,7 @@
 		<script src="/assets/js/module/uikit.min.js"></script>
 		<script src="/assets/js/module/uikit-icons.min.js"></script>
 		<script src="/assets/js/common.js"></script>
+		<script src="/assets/js/module/swiper.min.js"></script>
+		<script src="/assets/js/swiper.js"></script>
 	</body>
 </html>

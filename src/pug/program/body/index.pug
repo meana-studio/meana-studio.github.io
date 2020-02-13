@@ -6,6 +6,8 @@ block var
 	- image = 'image'
 	- site_name = 'site_name'
 	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+block end_link
+	link(rel='stylesheet', href="/assets/css/swiper.css")
 block body
 	section.herotitle-container.body(style="background-image:url(../uploads/bg_body.png);")
 		div.hero-content
@@ -136,3 +138,35 @@ block body
 								tr
 									td サンタマリアノヴェッラ スキンケア for FACE
 									td &yen;1,000
+	div.uk-container
+		#gallery
+			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
+			div#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
+				ul.swiper-wrapper
+					li.swiper-slide
+						img(src="/about/uploads/gallery01.jpg" uk-img)
+						h3 スタジオ外観
+					li.swiper-slide
+						img(src="/about/uploads/gallery07.jpg" uk-img)
+						h3 受付・エントランス
+					li.swiper-slide
+						img(src="/about/uploads/gallery02.jpg" uk-img)
+						h3 ボディメンテンナンスルーム
+					li.swiper-slide
+						img(src="/about/uploads/gallery03.jpg" uk-img)
+						h3 渡り廊下
+					li.swiper-slide
+						img(src="/about/uploads/gallery04.jpg" uk-img)
+						h3 マシン
+					li.swiper-slide
+						img(src="/about/uploads/gallery05.jpg" uk-img)
+						h3 トレーニングルーム（1）
+					li.swiper-slide
+						img(src="/about/uploads/gallery06.jpg" uk-img)
+						h3 トレーニングルーム（2）
+				a.swiper-button-prev(href="#")
+				a.swiper-button-next(href="#")
+			ul.swiper-pagination
+block end_of_body
+	script(src="/assets/js/module/swiper.min.js")
+	script(src="/assets/js/swiper.js")

@@ -15,6 +15,13 @@ block body
 				br
 				| 身体に関する情報や、MEANAのことについて書いています。
 	div.uk-container
+		div.blog-category-select
+			span カテゴリー
+			div.select-area
+				select.uk-select
+					option - カテゴリーを選択
+					option - # MEANAからのお知らせ
+					option - # 連載シリーズ
 		div.blog-card-container(uk-height-match="target: .card-body" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
 			- for (var x = 0; x < 3; x++)
 				a.card(href="blog.html")

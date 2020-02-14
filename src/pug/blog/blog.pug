@@ -22,7 +22,14 @@ block body
 					li
 						a(href="")
 							i(uk-icon="icon: facebook; ratio: 2")
+			time.uk-animation-slide-bottom-medium 2020/02/01
 			h1.uk-animation-slide-bottom-medium ブログを見た目確認のためのテスト投稿、こちらはタイトルです。
+			.blog-categories
+				ul(uk-scrollspy="target: li; cls: uk-animation-slide-bottom-medium; delay: 40")
+					li
+						a(href="") # MEANAからのお知らせ
+					li
+						a(href="") # 連載シリーズ
 		.blog-body(uk-scrollspy="target: *; cls: uk-animation-slide-bottom-medium; delay: 40")
 			h2 見出し大
 			h3 見出し中

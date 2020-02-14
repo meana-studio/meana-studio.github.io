@@ -23,8 +23,36 @@
 	}
 }
 
-.blog-card-container {
+.blog-category-select {
 	margin-top: 64px;
+	font-size: 1.4rem;
+	line-height: 1;
+	@include flex(nowrap,flex-start,center);
+	span {
+		font-weight: bold;
+		white-space: nowrap;
+		margin-right: 12px;
+	}
+	.select-area {
+		flex: 1;
+		.uk-select {
+			width: auto;
+			white-space: nowrap;
+			padding: 0 3em 0 1em;
+			font-weight: bold;
+			option {
+				padding: 0;
+			}
+		}
+	}
+	@include mq(md) {
+		margin-top: 15px;
+		font-size: 1rem;
+	}
+}
+
+.blog-card-container {
+	margin-top: 32px;
 	@include flex(wrap,flex-start,stretch);
 	margin-left: -12px;
 	margin-right: -12px;
@@ -49,6 +77,7 @@
 			display: block;
 			line-height: 1;
 			margin-bottom: 12px;
+			font-family: Helvetica, sans-serif;
 		}
 		p {
 			font-weight: bold;
@@ -75,6 +104,14 @@
 		width: auto;
 		padding: 15px 0;
 		font-size: 1.1rem;
+	}
+	time {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 1.3rem;
+		line-height: 1;
+		font-weight: bold;
+		font-family: Helvetica, sans-serif;
 	}
 	h1 {
 		font-size: 3.3rem;
@@ -116,6 +153,26 @@
 			font-weight: bold;
 			@include mq(md) {
 				font-size: 1rem;
+			}
+		}
+	}
+	.blog-categories {
+		margin-top: 24px;
+		ul {
+			@include flex(wrap,flex-start,center)
+			li {
+				margin-right: 16px;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					font-size: 1.3rem;
+					font-weight: 500;
+					text-decoration: underline;
+					@include mq(md) {
+						font-size: 1rem;
+					}
+				}
 			}
 		}
 	}

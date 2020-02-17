@@ -71,17 +71,25 @@
 		line-height: 1;
 		padding: .3em 0.8em;
 		border-radius: 2px;
-		background-color: #c1d7f7;
 		color: #1f3f13;
-		&.sat {
-			background-color: #c6e4a7;
-		}
-		&.sun {
-			background-color: #f6cf8e;
-		}
 		@include mq(md) {
 			font-size: 1rem;
 			margin-right: 15px;
+		}
+	}
+	&:nth-of-type(1n) {
+		.day {
+			background-color: #c1d7f7;
+		}
+	}
+	&:nth-of-type(2n) {
+		.day {
+			background-color: #c6e4a7;
+		}
+	}
+	&:nth-of-type(3n) {
+		.day {
+			background-color: #f6cf8e;
 		}
 	}
 	time {

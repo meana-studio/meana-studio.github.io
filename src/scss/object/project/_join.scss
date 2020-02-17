@@ -37,6 +37,9 @@
 			table-layout: fixed;
 			border-collapse: collapse;
 			font-size: 1.5rem;
+			@media screen and (max-width: 1024px) and (orientation: portrait) {
+				font-size: 1rem;
+			}
 			@include mq(md) {
 				margin-top: 15px;
 				font-size: 1rem;
@@ -51,7 +54,7 @@
 				}
 			}
 			td:nth-child(2) {
-				text-align: center;
+				text-align: right;
 			}
 		}
 	}

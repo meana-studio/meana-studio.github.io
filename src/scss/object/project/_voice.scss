@@ -31,6 +31,7 @@
 	}
 }
 
+
 .voice-card-container {
 	margin-top: 64px;
 	@include flex(wrap,flex-start,stretch);
@@ -134,6 +135,26 @@
 			font-weight: bold;
 			@include mq(md) {
 				font-size: 1rem;
+			}
+		}
+	}
+	.voice-categories {
+		margin-top: 24px;
+		ul {
+			@include flex(wrap,flex-start,center)
+			li {
+				margin-right: 16px;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					font-size: 1.3rem;
+					font-weight: 500;
+					text-decoration: underline;
+					@include mq(md) {
+						font-size: 1rem;
+					}
+				}
 			}
 		}
 	}
@@ -260,7 +281,7 @@
 }
 
 .relative-voice {
-	padding-top: 32px;
+	padding-top: 64px;
 	padding-left: 64px;
 	padding-right: 64px;
 	padding-bottom: 32px;
@@ -277,6 +298,32 @@
 		@include mq(md) {
 			font-size: 1.4rem;
 			margin-bottom: 16px;
+		}
+	}
+	.more {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		text-align: center;
+		@include mq(md) {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+		a {
+			font-size: 1.4rem;
+			background-color: #666;
+			padding-top: .6em;
+			padding-bottom: .6em;
+			border-radius: 20px;
+			line-height: 1;
+			color: #FFF;
+			text-transform: none;
+			@include mq(md) {
+				font-size: 1.2rem;
+				display: block;
+				border-radius: 0;
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
 		}
 	}
 }

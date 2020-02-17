@@ -15,25 +15,32 @@ block body
 				br
 				| 実際に体験された方々からの声をいくつかご紹介いたします。
 	div.uk-container
+		div.blog-category-select
+			span カテゴリー
+			div.select-area
+				select.uk-select
+					option - カテゴリーを選択
+					option - # MEANAからのお知らせ
+					option - # 連載シリーズ
 		div.voice-card-container(uk-height-match="target: .card-body h3" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
 			- for (var x = 0; x < 3; x++)
 				a.card(href="/voice/voice.html")
-					div.card-img(style="background-image:url(https://www.meana-studio.com/voice/uploads/a.jpg);")
+					div.card-img(style="background-image:url(https://test.meana-studio.com/voice/uploads/a.jpg);")
 					div.card-body
 						h3 悪かった膝が生活する上で不自由がなくなった上に風邪を全くひかなくなりました。
 						.name Aさん
 				a.card(href="/voice/voice.html")
-					div.card-img(style="background-image:url(https://www.meana-studio.com/voice/uploads/0c4423e1d548e92471f09b9da5fe36873a9f5cb8.jpg);")
+					div.card-img(style="background-image:url(https://test.meana-studio.com/voice/uploads/0c4423e1d548e92471f09b9da5fe36873a9f5cb8.jpg);")
 					div.card-body
 						h3 あらゆる腰痛治療法を試したものの改善されず、藁にもすがる思いでレッスンを申し込みました。
 						.name 大沢育郎さん
 				a.card(href="/voice/voice.html")
-					div.card-img(style="background-image:url(https://www.meana-studio.com/voice/uploads/544e7efb5b0176a7b55a7e530a4d2a7ceae1e1a9.jpg);")
+					div.card-img(style="background-image:url(https://test.meana-studio.com/voice/uploads/544e7efb5b0176a7b55a7e530a4d2a7ceae1e1a9.jpg);")
 					div.card-body
 						h3 レッスンで体が変わりペースメーカーをつける必要がなくなりました。
 						.name J .Oさん
 				a.card(href="/voice/voice.html")
-					div.card-img(style="background-image:url(https://www.meana-studio.com/voice/uploads/murakami.jpg);")
+					div.card-img(style="background-image:url(https://test.meana-studio.com/voice/uploads/murakami.jpg);")
 					div.card-body
 						h3 首の痛みが改善され、以前よりとても身体が軽くなったのを実感しています。
 						.name 村上さん

@@ -10,36 +10,26 @@ block body
 	div.uk-container
 		section.form-head
 			h1.uk-animation-slide-bottom-medium お問い合わせ
-			p.uk-animation-slide-bottom-medium MEANAについて詳しく知りたい、入会、または体験してみたいなど
+			p.uk-animation-slide-bottom-medium 以下の内容でメールを送信します。
 				br
-				| ご質問がある方は下記のフォームよりお問い合わせ下さい。
+				| 内容を修正する場合は、「戻って修正する」から戻って修正してください。
 		.form-body
-			form(action="confirm.html" uk-scrollspy="uk-animation-slide-bottom-medium")
+			form(action="thanks.html" uk-scrollspy="uk-animation-slide-bottom-medium")
 				fieldset
 					legend お名前
-					input(type="text" placeholder="例）　山田太郎")
+					.confirm 山田太郎
 				fieldset
 					legend お名前（ふりがな）
-					input(type="text" placeholder="例）　やまだたろう")
+					.confirm やまだたろう
 				fieldset
 					legend お電話番号（ハイフンなし）
-					input(type="tel" placeholder="例）　0487737787")
+					.confirm  0487737787
 				fieldset
 					legend メールアドレス
-					input(type="email" placeholder="例）　info@meana-studio.com")
-				fieldset
-					legend メールアドレスの確認
-					input(type="email" placeholder="例）　info@meana-studio.com")
+					.confirm info@meana-studio.com
 				fieldset
 					legend お問い合わせ内容
-					textarea
-				.privacy
-					p MEANA STUDIOへのお問い合わせに際し、
-						br
-						| ご入力いだいたお客様の個人情報について、
-						br
-						| 
-						a(href="/privacy/" target="_blank") プライバシーポリシー
-						| に従い取り扱います。
+					.confirm CGIプログラム（Perlプログラム）をブラウザで実行すると動作しないので、CentOS 6のApacheのエラーログ（/var/log/httpd/error_log）を確認すると、以下のようなエラーログが記録されていた。
 				.submit
+					a.historyback(href="javascript:history.back();") 戻って修正する
 					input(type="submit" value="同意して確認画面へ")

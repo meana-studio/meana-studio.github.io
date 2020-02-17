@@ -23,6 +23,12 @@ block body
 						a(href="")
 							i(uk-icon="icon: facebook; ratio: 2")
 			h1.uk-animation-slide-bottom-medium 悪かった膝が生活する上で不自由がなくなった上に風邪を全くひかなくなりました。
+			.voice-categories
+				ul(uk-scrollspy="target: li; cls: uk-animation-slide-bottom-medium; delay: 40")
+					li
+						a(href="") # MEANAからのお知らせ
+					li
+						a(href="") # 連載シリーズ
 		.voice-body(uk-scrollspy="target: *; cls: uk-animation-slide-bottom-medium; delay: 40")
 			h2 MEANAを選んでいただいている理由をお聞かせ下さい。
 			p 以前私は膝を悪くして、日常生活にも少々不自由でした。
@@ -61,3 +67,5 @@ block body
 				div.card-body
 					h3 首の痛みが改善され、以前よりとても身体が軽くなったのを実感しています。
 					.name 村上さん
+		.more
+			a.uk-button.uk-button-primary(href="") すべてのコンテンツを見る

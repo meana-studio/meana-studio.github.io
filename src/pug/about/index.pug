@@ -40,38 +40,31 @@ block body
 				p 当スタジオが重視するのは、体幹部の高度な安定性と機動性、各筋肉の連動性や柔軟性といった基礎の部分です。基礎の整ったカラダは、結果として、凛とした美しい姿勢、美しい所作、均整のとれた無駄のないボディラインをもたらします。また、ストレスや怪我に強いしなやかなカラダになるため、日々をよりアクティブに過ごすことが出来るようになります。
 				p カラダを根本から変えたい方、是非、当スタジオにお越しください。
 		#staff
-			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Staff
-			.staff-card-container(uk-scrollspy="target: > .card; cls: uk-animation-slide-bottom-medium; delay: 50")
-				.card
-					div.card-img(style="background-image:url(./uploads/asami.jpg);")
-					div.card-body
+			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Greeting
+			#greeting
+				#greeting-content(uk-scrollspy="target: > *; cls: uk-animation-slide-bottom-medium; delay: 50")
+					p 自分では精一杯運動や食事制限で努力しても
+					p ・結果がでない。
+						br
+						| ・ゴツゴツした硬い筋肉になってしまう。
+						br
+						| ・部分的に太くなってしまって自分の理想と違う。
+					p などなど、悩んでいる方は多いのではないでしょうか？
+					p カラダづくりで重要なのは、カラダを構成する206個の骨を正しい位置に整えたうえで、カラダの動く仕組みに沿った運動を的確に行うというシンプルなことです。骨が正しい位置にあると、関節がスムーズに働き、筋肉に無駄なストレスがかからず機能的で美しい筋肉がつきます。
+					p ただ、そのためにはカラダについての正しい知識とメソッドがとても大切になります。
+					p MEANAは英語の
+						strong 「mean」
+						| からきています。
+					p 「ｍean」は一般的には「意味する」と訳しますが、「重要性を持つ、大事である」「方法・手法」という意味もあります。
+					p 大切なカラダのことを正しく理解し、キレイな状態にメンテナンスしてあげることの大切さと効果的なメソッドを伝える場所。
+					p 皆さまにとって、そういう場所でありたいと思い、名づけました。
+					p
+						strong それが『MEANA』です。
+				figure(uk-scrollspy="uk-animation-slide-bottom-medium")
+					img(src="uploads/bg_greeting.png")
+					figcaption
+						small 代表インストラクター
 						h3 浅見 美奈子
-						.en Asami Minako
-				.card
-					div.card-img(style="background-image:url(./uploads/murakami.jpg);")
-					div.card-body
-						h3 村上 理恵子
-						.en Murakami Rieko
-				.card
-					div.card-img(style="background-image:url(./uploads/mori.jpg);")
-					div.card-body
-						h3 森 和賀奈
-						.en Mori Wakana
-				.card
-					div.card-img(style="background-image:url(./uploads/koike.jpg);")
-					div.card-body
-						h3 小池　麻美
-						.en Koike Mami
-				.card
-					div.card-img(style="background-image:url(./uploads/yamada.jpg);")
-					div.card-body
-						h3 山田 太郎
-						.en Taro Yamada
-				.card
-					div.card-img(style="background-image:url(./uploads/hanako.jpg);")
-					div.card-body
-						h3 山田 花子
-						.en Hanako Yamada
 		#gallery
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
 			div#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")

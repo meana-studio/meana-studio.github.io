@@ -4,6 +4,7 @@ var mySwiper = new Swiper ('#gallery-container', {
 	speed: 600,
 	centeredSlides: true,
 	spaceBetween: 40,
+	lazyLoading: true,
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: true

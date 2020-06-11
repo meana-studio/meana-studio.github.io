@@ -1,4 +1,5 @@
-name: EC2
+- name: SFTP Deploy
+  uses: wlixcc/SFTP-Deploy-Action@v1.0
 
 on:
   push:
@@ -6,16 +7,18 @@ on:
       - master
 
 jobs:
-  deploy:
+  deploy_job:
     runs-on: ubuntu-latest
+    name: deploy
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
-          ftp-server: ${{ secrets.FTP_HOST }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          git-ftp-args: --remote-root ${{ secrets.FTP_REMOTE_ROOT }}
-          local-dir: public
+          username: 'root'
+          server: 'your server ip'
+          private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './static/*'
+          remote_path: '/var/www/app' #make sure dir exist
+          args: '-o ConnectTimeout=5'

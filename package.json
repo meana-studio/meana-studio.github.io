@@ -26,7 +26,7 @@
     "gulp-uglify-es": "^2.0.0",
     "node-reset-scss": "^1.0.1",
     "postcss-reporter": "^6.0.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^19.0.0",
     "webpack": "^4.41.2",

@@ -3,6 +3,7 @@ const gulp = require("gulp");
 const { src, dest, parallel } = require('gulp');
 const browserSync = require("browser-sync");
 const sass = require("gulp-dart-sass");
+const postcss = require('gulp-postcss');
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
 const cssDeclarationSorter = require('css-declaration-sorter');
@@ -52,6 +53,7 @@ function css() {
 		.pipe(sass({
 			outputStyle: 'compressed',
 		}))
+    .pipe(postcss(plugin))
 		.pipe(sourcemaps.write("../maps/"))
 		.pipe(dest(filepath.css))
 }

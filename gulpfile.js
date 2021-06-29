@@ -2,8 +2,7 @@
 const gulp = require("gulp");
 const { src, dest, parallel } = require('gulp');
 const browserSync = require("browser-sync");
-const sass = require("gulp-sass");
-const postcss = require('gulp-postcss');
+const sass = require("gulp-dart-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
 const cssDeclarationSorter = require('css-declaration-sorter');
@@ -52,9 +51,7 @@ function css() {
 		.pipe(plumber())
 		.pipe(sass({
 			outputStyle: 'compressed',
-			includePaths: require('node-reset-scss').includePath
 		}))
-		.pipe(postcss(plugin))
 		.pipe(sourcemaps.write("../maps/"))
 		.pipe(dest(filepath.css))
 }

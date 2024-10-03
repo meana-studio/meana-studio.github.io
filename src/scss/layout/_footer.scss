@@ -1,11 +1,13 @@
+@use "../global";
+
 #footer {
-	border-top: 1px solid $gray;
+	border-top: 1px solid global.$gray;
 	background-color: #FFF;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	text-align: center;
 	font-size: 1.2rem;
-	@include mq(md) {
+	@include global.mq(md) {
 		font-size: 1rem;
 		padding-top: 1rem;
 		padding-bottom: 1rem;

@@ -1,0 +1,40 @@
+@use "../global";
+
+.section {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	h1 {
+		text-align: center;
+		font-size: 2.4rem;
+		font-weight: 900;
+		margin-bottom: 5rem;
+		line-height: 1;
+	}
+	h2 {
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: 900;
+		margin-bottom: 5rem;
+		line-height: 1;
+	}
+	h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-bottom: 1em;
+		line-height: 1;
+	}
+	> p {
+		text-align: center;
+	}
+	@include global.mq(md) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		h1 {
+			font-size: 1.5rem;
+			margin-bottom: 3rem;
+		}
+		h3 {
+			font-size: 1rem;
+		}
+	}
+}

@@ -1,3 +1,5 @@
+@use "../global";
+
 #header {
 	.uk-navbar-container {
 		height: 63px;
@@ -6,11 +8,11 @@
 		align-items: center;
 		background-color: #FFF;
 		padding: 0 64px;
-		@include mq(xxl) {
+		@include global.mq(xxl) {
 			padding-left: 24px;
 			padding-right: 24px;
 		}
-		@include mq(md) {
+		@include global.mq(md) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -18,14 +20,14 @@
 	.logo {
 		outline: none;
 		.st0 {
-			fill: $black;
+			fill: global.$black;
 		}
 		svg {
 			height: 14px;
 			outline: none;
 			display: inline-block;
 		}
-		@include mq(xl) {
+		@include global.mq(xl) {
 			text-align: center;
 			svg {
 				height: 14px;
@@ -95,7 +97,7 @@
 		border-radius: 0;
 		text-align: left;
 		a {
-			color: $black;
+			color: global.$black;
 			display: inline-block;
 			color: #FFF;
 			font-size: 1.3rem;
@@ -163,12 +165,12 @@
 
 .uk-offcanvas-bar {
 	background-color: rgba(255,255,255,0.95);
-	color: $black;
+	color: global.$black;
 	.uk-close {
-		color: $black;
+		color: global.$black;
 	}
 	.uk-nav-default li > a {
-		color: $black;
+		color: global.$black;
 		font-weight: 500;
 	}
 }

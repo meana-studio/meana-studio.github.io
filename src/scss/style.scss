@@ -1,50 +1,26 @@
-// ==========================================================================
-// Foundation
-// ==========================================================================
+@use "foundation";
 
-@import "_reset";
-@import "foundation/uikitreset";
-@import "foundation/mixin";
-@import "foundation/base";
-
-// ==========================================================================
 // Layout
-// ==========================================================================
-
-@import "layout/layout";
-@import "layout/header";
-@import "layout/footer";
-
-// ==========================================================================
-// Object
-// ==========================================================================
+@use "layout/layout";
+@use "layout/header";
+@use "layout/footer";
 
 
-// -----------------------------------------------------------------
-// Component
-// -----------------------------------------------------------------
 
-@import "object/component/headings";
-@import "object/component/card";
-@import "object/component/section";
-@import "object/component/schedule";
-@import "object/component/hero_title";
-@import "object/component/pagination";
-@import "object/component/socials";
+// component
+@use "component/headings";
+@use "component/card";
+@use "component/section";
+@use "component/schedule";
+@use "component/hero_title";
+@use "component/pagination";
+@use "component/socials";
 
-// -----------------------------------------------------------------
-// Project
-// -----------------------------------------------------------------
-
-@import "object/project/home";
-@import "object/project/program";
-@import "object/project/about";
-@import "object/project/join";
-@import "object/project/blog";
-@import "object/project/voice";
-@import "object/project/form";
-@import "object/project/legal";
-
-// -----------------------------------------------------------------
-// Utility
-// -----------------------------------------------------------------
+@use "project/home";
+@use "project/program";
+@use "project/about";
+@use "project/join";
+@use "project/blog";
+@use "project/voice";
+@use "project/form";
+@use "project/legal";

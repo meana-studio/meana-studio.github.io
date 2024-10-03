@@ -1,0 +1,228 @@
+@use "../global";
+
+#main-cover {
+	margin-top: -63px;
+	height: 100vh;
+	box-sizing: border-box;
+	@include global.mq(md) {
+		height: spvh(100);
+	}
+	#main-cover-image {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		@include global.mq(mdm) {
+			background-position: center center;
+			background-image: url(../../uploads/home_cover.jpg);
+		}
+		@include global.mq(md) {
+			background-position: center bottom;
+			background-image: url(../../uploads/home_cover_sp.jpg);
+			height: spvh(100);
+		}
+		&.active {
+			&:after {
+				transform: opacity 0.6s;
+				opacity: 1;
+			}
+		}
+	}
+	#cover-bg {
+		transition: opacity 0.6s ease-in;
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 2;
+		opacity: 0;
+		@include global.mq(md) {
+			height: spvh(100);
+		}
+	}
+	#main-cover-image.active + #cover-bg {
+		opacity: 1;
+	}
+	.cover-content {
+		position: absolute;
+		z-index: 3;
+		@include global.mq(mdm) {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		@include global.mq(md) {
+			width: 100%;
+			height: spvh(100);
+			text-align: center;
+			top: -100px;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		h1 {
+			display: none;
+			white-space: nowrap;
+			font-size: 3.2rem;
+			font-weight: bold;
+			text-align: center;
+			color: global.$black;
+			@include global.mq(md) {
+				font-size: 2rem;
+			}
+		}
+		.sp {
+			@include global.mq(mdm) {
+				display: none;
+			}
+			@include global.mq(md) {
+				display: block;
+			}
+		}
+	}
+	.scroll {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		bottom: 2em;
+		visibility: hidden;
+		text-align: center;
+		font-size: 1.6rem;
+		line-height: 1;
+		z-index: 3;
+		a {
+			color: #FFF;
+			animation:blink .5s ease-in-out infinite alternate;
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				&.icon {
+					margin-left: 4px;
+				}
+			}
+		}
+		@include global.mq(md) {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@keyframes blink{
+    0% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 1;
+	}
+}
+
+#animaton-area {
+
+}
+
+#home-service {
+	.service-container {
+		@include global.flex(wrap,flex-start,stretch);
+		margin-left: -25px;
+		margin-right: -25px;
+		@include global.mq(md) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.card {
+			box-sizing: border-box;
+			width: 50%;
+			padding-left: 25px;
+			padding-right: 25px;
+			margin-bottom: 25px;
+			&:hover {
+				transition: opacity 0.5s ease-in;
+				opacity: 0.8;
+			}
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				margin-bottom: 0;
+			}
+			@include global.mq(md) {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				&:nth-of-type(3) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+#home-about {
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 32%;
+	@include global.mq(md) {
+		padding-top: 42%;
+	}
+	.img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 42%;
+		@include global.mq(md) {
+			padding-top: 64%;
+		}
+	}
+	.section-title {
+		//color: #FFF;
+		text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.about-container {
+		margin-left: -10px;
+		margin-right: -10px;
+		@include global.flex(wrap,flex-start,stretch);
+		@include global.mq(md) {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+	}
+	.card {
+		width: 25%;
+		position: relative;
+		padding-left: 10px;
+		padding-right: 10px;
+		box-sizing: border-box;
+		&:hover {
+			transition: opacity 0.5s ease-in;
+			opacity: 0.8;
+		}
+		@include global.mq(md) {
+			width: 50%;
+			padding-left: 5px;
+			padding-right: 5px;
+			margin-bottom: 25px;
+		}
+		.card-img {
+			border-radius: 4px;
+		}
+		.card-body {
+			//background: none;
+			h3 {
+				text-align: center;
+			}
+		}
+	}
+}

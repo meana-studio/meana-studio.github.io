@@ -1,0 +1,157 @@
+@use "../global";
+
+.form-body {
+	box-sizing: border-box;
+	padding: 64px 32px;
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.7rem;
+	@include global.mq(md) {
+		width: auto;
+		padding: 15px 0;
+	}
+	fieldset {
+		margin-bottom: 32px;
+	}
+	legend {
+		font-weight: bold;
+		@include global.mq(md) {
+			font-size: 1.2rem;
+		}
+	}
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"] {
+		box-sizing: border-box;
+		margin-top: 12px;
+		display: block;
+		width: 100%;
+		line-height: 1;
+		padding: 1em;
+		border: none;
+		font-size: 1.6rem;
+		@include global.mq(md) {
+			margin-top: 6px;
+		}
+	}
+	textarea {
+		box-sizing: border-box;
+		margin-top: 12px;
+		display: block;
+		width: 100%;
+		padding: 1em;
+		border: none;
+		font-size: 1.6rem;
+		min-height: 230px;
+		@include global.mq(md) {
+			margin-top: 6px;
+		}
+	}
+	.privacy {
+		margin-top: 32px;
+		text-align: center;
+		font-size: 1.3rem;
+		a {
+			text-decoration: underline;
+		}
+		@include global.mq(md) {
+			font-size: 1rem;
+		}
+	}
+	.more {
+		padding-top: 64px;
+		padding-bottom: 64px;
+		text-align: center;
+		@include global.mq(md) {
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+		a {
+			font-size: 1.4rem;
+			background-color: #666;
+			padding-top: .6em;
+			padding-bottom: .6em;
+			border-radius: 20px;
+			line-height: 1;
+			color: #FFF;
+			text-transform: none;
+			@include global.mq(md) {
+				font-size: 1.2rem;
+				display: block;
+				border-radius: 0;
+				padding-top: 1em;
+				padding-bottom: 1em;
+			}
+		}
+	}
+	.submit {
+		margin-top: 32px;
+		.historyback {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			line-height: 1;
+			padding: 1em;
+			border: none;
+			font-size: 1.6rem;
+			font-weight: bold;
+			background-color: #FFF;
+			color: global.$black;
+			text-align: center;
+			margin-bottom: 16px;
+			@include global.mq(md) {
+				font-size: 1.2rem;
+			}
+		}
+		input[type="submit"] {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			line-height: 1;
+			padding: 1em;
+			border: none;
+			font-size: 1.6rem;
+			font-weight: bold;
+			background-color: global.$black;
+			color: #FFF;
+			appearance: none;
+			@include global.mq(md) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.form-head {
+	box-sizing: border-box;
+	padding: 64px 32px 0;
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	@include global.mq(md) {
+		width: auto;
+		padding: 30px 0 15px;
+		font-size: 1.1rem;
+	}
+	h1 {
+		font-size: 3.3rem;
+		line-height: 1.4;
+		font-weight: bold;
+		@include global.mq(md) {
+			font-size: 2rem;
+		}
+	}
+	p {
+		margin-top: 24px;
+		font-size: 1.4rem;
+		@include global.mq(md) {
+			font-size: 1rem;
+			text-align: left;
+			br {
+				display: none;
+			}
+		}
+	}
+}

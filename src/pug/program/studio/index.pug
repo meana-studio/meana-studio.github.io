@@ -1,108 +1,107 @@
 extends ../../includes/_layout
 block var
-	- title = 'スタジオレッスン | Studio MEANA（上尾駅 徒歩10分）'
-	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
-	- url = '/program/studio/"'
-	- image = 'https://www.meana-studio.com/uploads/bg_studio.png'
-	- site_name = 'site_name'
-	- description = '大人のための５名-15名程度で行うグループレッスン'
+  - title = 'スタジオレッスン'
+  - keywords = '大人,５名-15名,グループレッスン'
+  - url = '/program/studio/"'
+  - image = 'https://www.meana-studio.com/uploads/bg_studio.png'
+  - description = '大人のための５名-15名程度で行うグループレッスン'
 block end_link
-	link(rel='stylesheet', href="/assets/css/swiper.css")
+  link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
 block body
-	section.herotitle-container.studio(style="background-image:url(https://www.meana-studio.com/uploads/bg_studio.png);")
-		.hero-content
-			.en.uk-animation-slide-bottom-medium Studio Lesson
-			h1.uk-animation-slide-bottom-medium スタジオレッスン
-			p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
-				br
-				| オーダーメイド・トレーニング
-	.uk-container.studio
-		.schedule-container(uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-medium; delay: 50")
-			.schedule
-				.s-schedule
-					.day 月
-				time
-					i.material-icons access_time
-					span 11:50~13:00
-				.content
-					h3 バレエストレッチ＆エクササイズ
-					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-			.schedule
-				.s-schedule
-					.day 火
-				time
-					i.material-icons access_time
-					span 11:50~13:00
-				.content
-					h3 コアトレーニング＆ストレッチ
-					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
-			.schedule
-				.s-schedule
-					.day 木
-				time
-					i.material-icons access_time
-					span 11:50~13:00
-				.content
-					h3 バレエストレッチ＆エクササイズ
-					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-			.schedule
-				.s-schedule
-					.day 木
-				time
-					i.material-icons access_time
-					span 20:00~21:00
-				.content
-					h3 バレエストレッチ＆エクササイズ
-					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-			.schedule
-				.s-schedule
-					.day 金
-				time
-					i.material-icons access_time
-					span 11:50~13:00
-				.content
-					h3 コアトレーニング＆ストレッチ
-					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
-			.schedule
-				.s-schedule
-					.day 金
-				time
-					i.material-icons access_time
-					span 20:00~21:00
-				.content
-					h3 コアトレーニング＆ストレッチ
-					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
-			.schedule
-				.s-schedule
-					.day 日
-				time
-					i.material-icons access_time
-					span 11:00~12:00
-				.content
-					h3 コアトレーニング＆ストレッチ＋α
-					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！代謝UPのための筋肉を使わせながら歪みをリセット！
-		#gallery
-			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
-			#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
-				ul.swiper-wrapper
-					li.swiper-slide
-						img(src="/uploads/20200222223248-fcd69703e8c45cabc009e381575f81a08b17ada5.gif", uk-img)
-						h3 レッスン風景①
-					li.swiper-slide
-						img(src="/uploads/20200222223354-07ca93737d3bb437bc84327f022e6d69b3b24c60.jpg", uk-img)
-						h3 レッスン風景②
-					li.swiper-slide
-						img(src="/uploads/20200222223532-45ff9a9893c1788a79a79e94ddfb7d725ab9784d.gif", uk-img)
-						h3 レッスン風景③
-					li.swiper-slide
-						img(src="/uploads/20200222223846-65298a18cc80e270512f03461e94fd6ff321cae1.gif", uk-img)
-						h3 レッスン風景⑤
-					li.swiper-slide
-						img(src="/uploads/20200222232333-477f52fc5b0322c82404b297cb08fe5abfe69ba2.gif", uk-img)
-						h3 スタジオレッスンルーム
-				a.swiper-button-prev(href="#")
-				a.swiper-button-next(href="#")
-			ul.swiper-pagination
+  section.herotitle-container.studio(style="background-image:url(https://www.meana-studio.com/uploads/bg_studio.png);")
+    .hero-content
+      .en.uk-animation-slide-bottom-medium Studio Lesson
+      h1.uk-animation-slide-bottom-medium スタジオレッスン
+      p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
+        br
+        | オーダーメイド・トレーニング
+  .uk-container.studio
+    .schedule-container(uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-medium; delay: 50")
+      .schedule
+        .s-schedule
+          .day 月
+        time
+          i.material-icons access_time
+          span 11:50~13:00
+        .content
+          h3 バレエストレッチ＆エクササイズ
+          p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+      .schedule
+        .s-schedule
+          .day 火
+        time
+          i.material-icons access_time
+          span 11:50~13:00
+        .content
+          h3 コアトレーニング＆ストレッチ
+          p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+      .schedule
+        .s-schedule
+          .day 木
+        time
+          i.material-icons access_time
+          span 11:50~13:00
+        .content
+          h3 バレエストレッチ＆エクササイズ
+          p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+      .schedule
+        .s-schedule
+          .day 木
+        time
+          i.material-icons access_time
+          span 20:00~21:00
+        .content
+          h3 バレエストレッチ＆エクササイズ
+          p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+      .schedule
+        .s-schedule
+          .day 金
+        time
+          i.material-icons access_time
+          span 11:50~13:00
+        .content
+          h3 コアトレーニング＆ストレッチ
+          p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+      .schedule
+        .s-schedule
+          .day 金
+        time
+          i.material-icons access_time
+          span 20:00~21:00
+        .content
+          h3 コアトレーニング＆ストレッチ
+          p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+      .schedule
+        .s-schedule
+          .day 日
+        time
+          i.material-icons access_time
+          span 11:00~12:00
+        .content
+          h3 コアトレーニング＆ストレッチ＋α
+          p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！代謝UPのための筋肉を使わせながら歪みをリセット！
+    #gallery
+      h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
+      #gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
+        ul.swiper-wrapper
+          li.swiper-slide
+            img(src="/uploads/20200222223248-fcd69703e8c45cabc009e381575f81a08b17ada5.gif", uk-img)
+            h3 レッスン風景①
+          li.swiper-slide
+            img(src="/uploads/20200222223354-07ca93737d3bb437bc84327f022e6d69b3b24c60.jpg", uk-img)
+            h3 レッスン風景②
+          li.swiper-slide
+            img(src="/uploads/20200222223532-45ff9a9893c1788a79a79e94ddfb7d725ab9784d.gif", uk-img)
+            h3 レッスン風景③
+          li.swiper-slide
+            img(src="/uploads/20200222223846-65298a18cc80e270512f03461e94fd6ff321cae1.gif", uk-img)
+            h3 レッスン風景⑤
+          li.swiper-slide
+            img(src="/uploads/20200222232333-477f52fc5b0322c82404b297cb08fe5abfe69ba2.gif", uk-img)
+            h3 スタジオレッスンルーム
+        a.swiper-button-prev(href="#")
+        a.swiper-button-next(href="#")
+      ul.swiper-pagination
 block end_of_body
-	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
-	script(src="/assets/js/swiper.js")
+  script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+  script(src="/assets/js/swiper.js")

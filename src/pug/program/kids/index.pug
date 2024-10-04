@@ -1,77 +1,98 @@
 extends ../../includes/_layout
 block var
-	- title = 'スタジオレッスン | Meana'
-	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
-	- url = 'https://www.meana-studio.com/'
-	- image = 'image'
-	- site_name = 'site_name'
-	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+  - title = 'キッズレッスン'
+  - keywords = 'キッズレッスン'
+  - url = '/program/kids/'
+  - image = '/uploads/bg_kids.png'
+  - description = '12歳までのキッズ専用のグループレッスン'
 block end_link
-	link(rel='stylesheet', href="/assets/css/swiper.css")
+  link(rel='stylesheet', href="/assets/css/swiper.css")
 block body
-	section.herotitle-container.kids(style="background-image:url(../uploads/bg_kids.png);")
-		div.hero-content
-			div.en.uk-animation-slide-bottom-medium Kids Lesson
-			h1.uk-animation-slide-bottom-medium キッズレッスン
-			p.uk-animation-slide-bottom-medium 12歳までのキッズ専用のグループレッスン
-	div.uk-container.kids
-		div.schedule-container(uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 50")
-			- for (var x = 0; x < 3; x++)
-				div.schedule
-					div.s-schedule
-						div.day Mon
-					time
-						i.material-icons access_time
-						span 9:00~10:00
-					div.content
-						h3 バレエストレッチ
-						p ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-				div.schedule
-					div.s-schedule
-						div.day.sat Sat
-					time
-						i.material-icons access_time
-						span 9:00~10:00
-					div.content
-						h3 コアストレッチ &amp; トレーニング
-						p カラダの歪みを整え、リセットするメソッドで、キレイな姿勢と太りにくい体質に！
-				div.schedule
-					div.s-schedule
-						div.day.sun Sun
-					time
-						i.material-icons access_time
-						span 13:00~14:00
-					div.content
-						h3 Limber Body &amp; Slow Dance
-						p 代謝UPのための筋肉を使わせるムービング運動と、ストレッチをミックスしたシェイプアップレッスン！
-		#gallery
-			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
-			div#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
-				ul.swiper-wrapper
-					li.swiper-slide
-						img(src="/about/uploads/gallery01.jpg" uk-img)
-						h3 スタジオ外観
-					li.swiper-slide
-						img(src="/about/uploads/gallery07.jpg" uk-img)
-						h3 受付・エントランス
-					li.swiper-slide
-						img(src="/about/uploads/gallery02.jpg" uk-img)
-						h3 ボディメンテンナンスルーム
-					li.swiper-slide
-						img(src="/about/uploads/gallery03.jpg" uk-img)
-						h3 渡り廊下
-					li.swiper-slide
-						img(src="/about/uploads/gallery04.jpg" uk-img)
-						h3 マシン
-					li.swiper-slide
-						img(src="/about/uploads/gallery05.jpg" uk-img)
-						h3 トレーニングルーム（1）
-					li.swiper-slide
-						img(src="/about/uploads/gallery06.jpg" uk-img)
-						h3 トレーニングルーム（2）
-				a.swiper-button-prev(href="#")
-				a.swiper-button-next(href="#")
-			ul.swiper-pagination
+  section.herotitle-container.kids(style="background-image:url(/uploads/bg_kids.png);")
+    .hero-content
+      .en.uk-animation-slide-bottom-medium Kids Lesson
+      h1.uk-animation-slide-bottom-medium キッズレッスン
+      p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
+        br
+        | オーダーメイド・トレーニング
+  .uk-container.kids
+    .schedule-container(uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-medium; delay: 50")
+      .schedule
+        .s-schedule
+          .day 月
+        time
+          i.material-icons access_time
+          span 16:45~17:45
+        .content
+          h3 Little Kidsスタートクラス【４歳～】
+          p 基礎のバレエメソッドで、筋力・柔軟性をバランス良く身につけ、キレイな姿勢としなやかなカラダをつくります！（4歳から受講可能です。）
+      .schedule
+        .s-schedule
+          .day 月
+        time
+          i.material-icons access_time
+          span 18:00~19:00
+        .content
+          h3 スキルアップクラス【６歳～】
+          p 基礎のバレエメソッドで、筋力・柔軟性をバランス良く身につけ、キレイな姿勢としなやかなカラダをつくります！（6歳から受講可能です。）
+      .schedule
+        .s-schedule
+          .day 月
+        time
+          i.material-icons access_time
+          span 19:00~20:00
+        .content
+          h3 ダンススキルアップ
+          p ダンス・バレエの専門的な技術を学び、コンクール等の出場・上位入賞を目指します。（コンクールの出場には審査があります。）
+      .schedule
+        .s-schedule
+          .day 木
+        time
+          i.material-icons access_time
+          span 18:45~19:45
+        .content
+          h3 スキルアップクラス【６歳～】
+          p 基礎のバレエメソッドで、筋力・柔軟性をバランス良く身につけ、キレイな姿勢としなやかなカラダをつくります！（6歳から受講可能です。）
+      .schedule
+        .s-schedule
+          .day 金
+        time
+          i.material-icons access_time
+          span 18:45~19:45
+        .content
+          h3 バレエ基礎
+          p ストレッチの基本となる部位を柔軟にし、中心軸の鍛えるためのレッスン。（バレエスキルの高い子はトゥシューズを使用します。）
+      .schedule
+        .s-schedule
+          .day 日
+        time
+          i.material-icons access_time
+          span 16:00~17:15
+        .content
+          h3 ダンススキルアップ
+          p ダンス・バレエの専門的な技術を学び、コンクール等の出場・上位入賞を目指します。（コンクールの出場には審査があります。）
+    #gallery
+      h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
+      #gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
+        ul.swiper-wrapper
+          li.swiper-slide
+            img(src="/uploads/20200222224839-0d0cee0e18e46fd53e3783398e32d8cbde52e5cf.gif", uk-img)
+            h3 レッスン風景①
+          li.swiper-slide
+            img(src="/uploads/20200222224913-079662b74464ed8b68e084888e54bf2a1a8d4323.gif", uk-img)
+            h3 レッスン風景②
+          li.swiper-slide
+            img(src="/uploads/20200222224945-e51683dce38f9cf3779f681e51a71cd94334c42b.gif", uk-img)
+            h3 レッスン風景③
+          li.swiper-slide
+            img(src="/uploads/20200222225023-ec8dfda1d565784b69fdb0fcd7bf3fd286cfbe7c.gif", uk-img)
+            h3 レッスン風景④
+          li.swiper-slide
+            img(src="/uploads/20200222225049-4ecd5b9997de053e2306c604210770f68c9815c3.gif", uk-img)
+            h3 レッスン風景⑤
+        a.swiper-button-prev(href="#")
+        a.swiper-button-next(href="#")
+      ul.swiper-pagination
 block end_of_body
-	script(src="/assets/js/module/swiper.min.js")
-	script(src="/assets/js/swiper.js")
+  script(src="/assets/js/module/swiper.min.js")
+  script(src="/assets/js/swiper.js")

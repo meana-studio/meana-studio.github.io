@@ -1,7 +1,7 @@
 "use strict";
 const gulp = require("gulp");
 const { src, dest, parallel } = require('gulp');
-const browserSync = require("browser-sync");
+const browserSync = require("browser-sync").create();
 const sass = require('gulp-dart-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require("gulp-sourcemaps");
@@ -15,7 +15,7 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require("gulp-uglify-es").default;
 const notify = require('gulp-notify');
-const newer = require('gulp-newer');  // gulp-newer を追加
+const newer = require('gulp-newer');
 
 const filepath = {
   html: './docs/',
@@ -24,18 +24,17 @@ const filepath = {
 
 const path = {
   pug: ['./src/pug/**/*.pug', '!./src/pug/**/_*.pug'],
-  scss: './src/scss/**/*scss',
-  js: './src/js/**/*js'
+  scss: './src/scss/**/*.scss',
+  js: './src/js/**/*.js'
 }
 
 // browser sync
-function browserSyncFunc(done){
+function browserSyncFunc(done) {
   browserSync.init({
     server: {
-      baseDir: 'docs/',
-      directory: false
+      baseDir: 'docs/',  // docsフォルダをルートディレクトリとして提供
     },
-    port: 3000,
+    port: 3000,  // Expressの代わりにBrowserSyncが使用するポート
     reloadOnRestart: true
   });
   done();
@@ -59,12 +58,12 @@ function css() {
     .pipe(postcss(plugin))
     .pipe(sourcemaps.write("../maps/"))
     .pipe(dest(filepath.css))
+    .pipe(browserSync.stream());  // CSS変更時にブラウザを自動リロード
 }
 
 /* pug */
 function html() {
-  return src(path.pug)
-    .pipe(newer(filepath.html))  // gulp-newer を使用
+  return src(['./src/pug/**/*.pug', '!./src/pug/**/_*.pug'])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(pug())
     .pipe(beautify({
@@ -76,7 +75,8 @@ function html() {
       'content_unformatted': 'script',
       'indent_char': ' '
     }))
-    .pipe(dest(filepath.html));
+    .pipe(dest(filepath.html))
+    .pipe(browserSync.stream());  // HTML変更時にブラウザを自動リロード
 }
 
 /* js */
@@ -88,7 +88,8 @@ function js() {
   .pipe(babel())
   .pipe(uglify())
   .pipe(concat('bundle.js'))
-  .pipe(dest('./docs/assets/js'));
+  .pipe(dest('./docs/assets/js'))
+  .pipe(browserSync.stream());  // JS変更時にブラウザを自動リロード
 }
 
 // watch

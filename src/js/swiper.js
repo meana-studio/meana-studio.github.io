@@ -1,4 +1,4 @@
-var mySwiper = new Swiper ('#gallery-container', {
+const mySwiper = new Swiper ('#gallery-container', {
 	loop: true,
 	slidesPerView: 2,
 	speed: 600,
@@ -19,18 +19,18 @@ var mySwiper = new Swiper ('#gallery-container', {
 	breakpoints: {
 		// when window width is >= 320px
 		320: {
-		  slidesPerView: 1,
-		  spaceBetween: 0
+      slidesPerView: 1,
+      spaceBetween: 0
 		},
 		// when window width is >= 480px
 		480: {
-		  slidesPerView: 1,
-		  spaceBetween: 0
+      slidesPerView: 1,
+      spaceBetween: 0
 		},
 		// when window width is >= 640px
 		720: {
-		  slidesPerView: 2,
-		  spaceBetween: 40
+      slidesPerView: 2,
+      spaceBetween: 40
 		}
-	  }
+	}
 })

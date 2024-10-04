@@ -6,7 +6,7 @@ block var
   - image = '/uploads/bg_kids.png'
   - description = '12歳までのキッズ専用のグループレッスン'
 block end_link
-  link(rel='stylesheet', href="/assets/css/swiper.css")
+  link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
 block body
   section.herotitle-container.kids(style="background-image:url(/uploads/bg_kids.png);")
     .hero-content
@@ -16,7 +16,7 @@ block body
         br
         | オーダーメイド・トレーニング
   .uk-container.kids
-    .schedule-container(uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-medium; delay: 50")
+    .schedule-container(uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 50")
       .schedule
         .s-schedule
           .day 月
@@ -94,5 +94,5 @@ block body
         a.swiper-button-next(href="#")
       ul.swiper-pagination
 block end_of_body
-  script(src="/assets/js/module/swiper.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
   script(src="/assets/js/swiper.js")

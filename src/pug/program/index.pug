@@ -1,35 +1,35 @@
 extends ../includes/_layout
 block var
-	- title = 'サービスメニュー | Meana'
-	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
-	- url = 'https://www.meana-studio.com/'
-	- image = 'image'
-	- site_name = 'site_name'
-	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+  - title = 'サービスメニュー | Meana'
+  - keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
+  - url = 'https://www.meana-studio.com/'
+  - image = 'image'
+  - site_name = 'site_name'
+  - description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
 block body
-	section.herotitle-container.programtop(style="background-image:url(uploads/bg_programtop.png);")
-		div.hero-content
-			div.uk-animation-slide-bottom-medium.en Program Menu
-			h1.uk-animation-slide-bottom-medium メニュー
-	div.uk-container.programtop
-		div.program-container(uk-height-match="target: .card-body" uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
-			a.card(href="/program/personal/")
-				div.card-img(style="background-image:url(../uploads/home_service_personal.jpg);")
-				div.card-body
-					h3 パーソナルトレーニング
-					p 一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング
-			a.card(href="/program/body/")
-				div.card-img(style="background-image:url(../uploads/home_service_body.jpg);")
-				div.card-body
-					h3 ボディメンテナンス
-					p テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。
-			a.card(href="/program/studio/")
-				div.card-img(style="background-image:url(../uploads/home_service_studio.jpg);")
-				div.card-body
-					h3 スタジオレッスン
-					p ５〜15人のグループで行うスタジオ・レッスン。
-			a.card(href="/program/kids/")
-				div.card-img(style="background-image:url(../uploads/home_service_kids.jpg);")
-				div.card-body
-					h3 キッズレッスン
-					p 12歳までのキッズ専用のグループレッスン。
+  section.herotitle-container.programtop(style="background-image:url(uploads/bg_programtop.png);")
+    .hero-content
+      .uk-animation-slide-bottom-medium.en Program Menu
+      h1.uk-animation-slide-bottom-medium メニュー
+  .uk-container.programtop
+    .program-container(uk-height-match="target: .card-body", uk-scrollspy="target: .card; cls: uk-animation-slide-bottom-medium; delay: 40")
+      a.card(href="/program/personal/")
+        .card-img(style="background-image:url(../uploads/home_service_personal.jpg);")
+        .card-body
+          h3 パーソナルトレーニング
+          p 一人ひとりのカラダの特性や状態に合わせたオーダーメイド・トレーニング
+      a.card(href="/program/body/")
+        .card-img(style="background-image:url(../uploads/home_service_body.jpg);")
+        .card-body
+          h3 ボディメンテナンス
+          p テンピュール®社製のベッド上で行うパーソナルストレッチ＆各種マッサージ。
+      a.card(href="/program/studio/")
+        .card-img(style="background-image:url(../uploads/home_service_studio.jpg);")
+        .card-body
+          h3 スタジオレッスン
+          p ５〜15人のグループで行うスタジオ・レッスン。
+      a.card(href="/program/kids/")
+        .card-img(style="background-image:url(../uploads/home_service_kids.jpg);")
+        .card-body
+          h3 キッズレッスン
+          p 12歳までのキッズ専用のグループレッスン。

@@ -2,7 +2,7 @@
 const gulp = require("gulp");
 const { src, dest, parallel } = require('gulp');
 const browserSync = require("browser-sync");
-const sass = require("gulp-dart-sass");
+const sass = require('gulp-dart-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
@@ -15,13 +15,15 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require("gulp-uglify-es").default;
 const notify = require('gulp-notify');
-const changed  = require('gulp-changed');
+const newer = require('gulp-newer');  // gulp-newer を追加
+
 const filepath = {
   html: './docs/',
   css: './docs/assets/css',
 }
+
 const path = {
-  pug: "['./src/pug/**/*.pug', '!./src/pug/**/_*.pug']",
+  pug: ['./src/pug/**/*.pug', '!./src/pug/**/_*.pug'],
   scss: './src/scss/**/*scss',
   js: './src/js/**/*js'
 }
@@ -61,27 +63,25 @@ function css() {
 
 /* pug */
 function html() {
-  return src(['./src/pug/**/*.pug', '!./src/pug/**/_*.pug'])
-    .pipe(changed('./'))
+  return src(path.pug)
+    .pipe(newer(filepath.html))  // gulp-newer を使用
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-        .pipe(pug())
-        .pipe(beautify(
-            {
-                'indent_size': 2,
-                'indent_level': 0,
-                'indent_with_tabs': false,
-                'indent_inner_html': false,
-                "indent_scripts": "keep",
-                'content_unformatted': 'script',
-                'indent_char': ' '
-            }
-        ))
+    .pipe(pug())
+    .pipe(beautify({
+      'indent_size': 2,
+      'indent_level': 0,
+      'indent_with_tabs': false,
+      'indent_inner_html': false,
+      "indent_scripts": "keep",
+      'content_unformatted': 'script',
+      'indent_char': ' '
+    }))
     .pipe(dest(filepath.html));
 }
 
 /* js */
 function js() {
-    return src('./src/js/**/*.js',{
+  return src('./src/js/**/*.js', {
     sourcemaps: true
   })
   .pipe(plumber())
@@ -93,16 +93,15 @@ function js() {
 
 // watch
 function watch(done) {
-  gulp.watch('./src/pug/**/*.pug', gulp.task('html'));
-  gulp.watch('./src/js/**/*.js', gulp.task('js'));
-  gulp.watch('./src/scss/**/*.scss', gulp.task('css'));
+  gulp.watch('./src/pug/**/*.pug', html);
+  gulp.watch('./src/js/**/*.js', js);
+  gulp.watch('./src/scss/**/*.scss', css);
   done();
 }
-
 
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.server = browserSyncFunc;
 exports.watch = watch;
-exports.default = parallel(watch,css,html,js,browserSyncFunc);
+exports.default = parallel(watch, css, html, js, browserSyncFunc);

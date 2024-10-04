@@ -1,4 +1,1 @@
-document.documentElement.style.setProperty(
-	'--vh',
-	`${window.innerHeight * 0.01}px`
-)
+"use strict";document.documentElement.style.setProperty("--vh","".concat(.01*window.innerHeight,"px"));

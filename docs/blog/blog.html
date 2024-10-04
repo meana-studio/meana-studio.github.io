@@ -23,7 +23,6 @@
   <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/uikit.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/mty5bcn.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -86,12 +85,31 @@
           <li class="nav"><a href="/about/">スタジオ紹介</a></li>
           <li class="nav"><a href="/join/">料金・入会</a></li>
           <li class="nav"><a href="/voice/">お客様の声</a></li>
-          <li class="nav"><a href="/blog/">ブログ</a></li>
+          <li class="nav"><a href="/blog/">ニュース＆コラム</a></li>
         </ul>
         <div class="contact uk-visible@m"><a class="uk-button uk-button-primary" href="/inquiry/"><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div><a class="uk-hidden@m uk-icon uk-navbar-toggle-icon" id="toggle-menu" href="#offcanvas-usage" uk-toggle uk-navbar-toggle-icon></a>
       </div>
     </nav>
   </header>
+  <div id="offcanvas-usage" uk-offcanvas="mode: push;overlay: true">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push"><button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close></button>
+      <div class="uk-panel uk-margin-large-top">
+        <ul class="uk-nav uk-nav-default tm-nav">
+          <li class="nav"><a href="/">トップ</a></li>
+          <li><a href="/program/">メニューTOP</a></li>
+          <li><a href="/program/personal/">パーソナルトレーニング</a></li>
+          <li><a href="/program/body/">ボディメンテナンス</a></li>
+          <li><a href="/program/studio/">スタジオレッスン</a></li>
+          <li><a href="/program/kids/">キッズレッスン</a></li>
+          <li><a href="/about/">スタジオ紹介</a></li>
+          <li><a href="/join/">料金・入会</a></li>
+          <li><a href="/voice/">お客様の声</a></li>
+          <li><a href="/blog/">ニュース＆コラム</a></li>
+        </ul>
+        <div class="contact uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="/inquiry/"><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div>
+      </div>
+    </div>
+  </div>
   <div id="container">
     <div class="uk-container">
       <section class="blog-head"><img class="uk-animation-slide-bottom-medium" src="https://www.meana-studio.com/jolielaide/uploads/vol1.jpg">
@@ -196,28 +214,9 @@
     </div>
   </div>
   <footer id="footer">&copy; Studio Meana</footer>
-  <div id="offcanvas-usage" uk-offcanvas="mode: push;overlay: true">
-    <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push"><button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close></button>
-      <div class="uk-panel uk-margin-large-top">
-        <ul class="uk-nav uk-nav-default tm-nav">
-          <li><a href="/program/">メニューTOP</a></li>
-          <li><a href="/program/personal/">パーソナルトレーニング</a></li>
-          <li><a href="/program/body/">ボディメンテナンス</a></li>
-          <li><a href="/program/studio/">スタジオレッスン</a></li>
-          <li><a href="/program/kids/">キッズレッスン</a></li>
-          <li><a href="/about/">スタジオ紹介</a></li>
-          <li><a href="/join/">料金・入会</a></li>
-          <li><a href="/voice/">お客様の声</a></li>
-          <li><a href="/blog/">ブログ</a></li>
-        </ul>
-        <div class="contact uk-margin-top"><a class="uk-button uk-button-primary uk-width-1-1" href="/inquiry/"><span class="icon" uk-icon="mail"></span><span>お問い合わせ</span></a></div>
-      </div>
-    </div>
-  </div>
+  <script src="/assets/js/module/bundle.js"></script>
   <script src="/assets/js/module/uikit.min.js"></script>
   <script src="/assets/js/module/uikit-icons.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="/assets/js/module/bundle.js"></script>
 </body>
 
 </html>

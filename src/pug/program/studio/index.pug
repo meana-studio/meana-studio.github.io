@@ -9,71 +9,100 @@ block var
 block end_link
 	link(rel='stylesheet', href="/assets/css/swiper.css")
 block body
-	section.herotitle-container.studio(style="background-image:url(../uploads/bg_studio.png);")
-		div.hero-content
-			div.en.uk-animation-slide-bottom-medium Studio Lesson
+	section.herotitle-container.studio(style="background-image:url(https://www.meana-studio.com/uploads/bg_studio.png);")
+		.hero-content
+			.en.uk-animation-slide-bottom-medium Studio Lesson
 			h1.uk-animation-slide-bottom-medium スタジオレッスン
-			p.uk-animation-slide-bottom-medium 大人のための５名-15名程度で
+			p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
 				br
-				| 行うグループレッスン
-	div.uk-container.studio
-		div.schedule-container(uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-medium; delay: 50")
-			- for (var x = 0; x < 3; x++)
-				div.schedule
-					div.s-schedule
-						div.day Mon
-					time
-						i.material-icons access_time
-						span 9:00~10:00
-					div.content
-						h3 バレエストレッチ
-						p ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
-				div.schedule
-					div.s-schedule
-						div.day.sat Sat
-					time
-						i.material-icons access_time
-						span 9:00~10:00
-					div.content
-						h3 コアストレッチ &amp; トレーニング
-						p カラダの歪みを整え、リセットするメソッドで、キレイな姿勢と太りにくい体質に！
-				div.schedule
-					div.s-schedule
-						div.day.sun Sun
-					time
-						i.material-icons access_time
-						span 13:00~14:00
-					div.content
-						h3 Limber Body &amp; Slow Dance
-						p 代謝UPのための筋肉を使わせるムービング運動と、ストレッチをミックスしたシェイプアップレッスン！
+				| オーダーメイド・トレーニング
+	.uk-container.studio
+		.schedule-container(uk-scrollspy="target: &gt; div; cls: uk-animation-slide-bottom-medium; delay: 50")
+			.schedule
+				.s-schedule
+					.day 月
+				time
+					i.material-icons access_time
+					span 11:50~13:00
+				.content
+					h3 バレエストレッチ＆エクササイズ
+					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+			.schedule
+				.s-schedule
+					.day 火
+				time
+					i.material-icons access_time
+					span 11:50~13:00
+				.content
+					h3 コアトレーニング＆ストレッチ
+					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+			.schedule
+				.s-schedule
+					.day 木
+				time
+					i.material-icons access_time
+					span 11:50~13:00
+				.content
+					h3 バレエストレッチ＆エクササイズ
+					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+			.schedule
+				.s-schedule
+					.day 木
+				time
+					i.material-icons access_time
+					span 20:00~21:00
+				.content
+					h3 バレエストレッチ＆エクササイズ
+					p 体幹部の筋肉の筋肉を目覚めさせるバレエメソッドのストレッチ＆トレーニング。ストレッチの基本となる部位を柔軟にし、美しいボディラインを作ります。
+			.schedule
+				.s-schedule
+					.day 金
+				time
+					i.material-icons access_time
+					span 11:50~13:00
+				.content
+					h3 コアトレーニング＆ストレッチ
+					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+			.schedule
+				.s-schedule
+					.day 金
+				time
+					i.material-icons access_time
+					span 20:00~21:00
+				.content
+					h3 コアトレーニング＆ストレッチ
+					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！
+			.schedule
+				.s-schedule
+					.day 日
+				time
+					i.material-icons access_time
+					span 11:00~12:00
+				.content
+					h3 コアトレーニング＆ストレッチ＋α
+					p カラダの歪みを整え、リセットするメソッドでキレイな姿勢と太りにくい体質に！代謝UPのための筋肉を使わせながら歪みをリセット！
 		#gallery
 			h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
-			div#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
+			#gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
 				ul.swiper-wrapper
 					li.swiper-slide
-						img(src="/about/uploads/gallery01.jpg" uk-img)
-						h3 スタジオ外観
+						img(src="/uploads/20200222223248-fcd69703e8c45cabc009e381575f81a08b17ada5.gif", uk-img)
+						h3 レッスン風景①
 					li.swiper-slide
-						img(src="/about/uploads/gallery07.jpg" uk-img)
-						h3 受付・エントランス
+						img(src="/uploads/20200222223354-07ca93737d3bb437bc84327f022e6d69b3b24c60.jpg", uk-img)
+						h3 レッスン風景②
 					li.swiper-slide
-						img(src="/about/uploads/gallery02.jpg" uk-img)
-						h3 ボディメンテンナンスルーム
+						img(src="/uploads/20200222223532-45ff9a9893c1788a79a79e94ddfb7d725ab9784d.gif", uk-img)
+						h3 レッスン風景③
 					li.swiper-slide
-						img(src="/about/uploads/gallery03.jpg" uk-img)
-						h3 渡り廊下
+						img(src="/uploads/20200222223846-65298a18cc80e270512f03461e94fd6ff321cae1.gif", uk-img)
+						h3 レッスン風景⑤
 					li.swiper-slide
-						img(src="/about/uploads/gallery04.jpg" uk-img)
-						h3 マシン
-					li.swiper-slide
-						img(src="/about/uploads/gallery05.jpg" uk-img)
-						h3 トレーニングルーム（1）
-					li.swiper-slide
-						img(src="/about/uploads/gallery06.jpg" uk-img)
-						h3 トレーニングルーム（2）
+						img(src="/uploads/20200222232333-477f52fc5b0322c82404b297cb08fe5abfe69ba2.gif", uk-img)
+						h3 スタジオレッスンルーム
 				a.swiper-button-prev(href="#")
 				a.swiper-button-next(href="#")
 			ul.swiper-pagination
 block end_of_body
-	script(src="/assets/js/module/swiper.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
 	script(src="/assets/js/swiper.js")

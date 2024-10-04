@@ -1,39 +1,32 @@
 extends ../../includes/_layout
 block var
-  - title = 'スタジオレッスン | Meana'
-  - keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
-  - url = 'https://www.meana-studio.com/'
-  - image = 'image'
-  - site_name = 'site_name'
-  - description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+  - title = 'ボディメンテナンス'
+  - keywords = 'テンピュール,パーソナルストレッチ,マッサージ'
+  - url = '/program/body/'
+  - image = 'https://www.meana-studio.com/uploads/bg_body2.png'
+  - description = 'テンピュール®製のベッドで行うStudio MEANAオリジナルのパーソナルストレッチ・マッサージ'
 block end_link
-  link(rel='stylesheet', href="/assets/css/swiper.css")
+  link(rel='stylesheet', href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
 block body
-  section.herotitle-container.body(style="background-image:url(../uploads/bg_body2.png);")
+  section.herotitle-container.body(style="background-image:url(https://www.meana-studio.com/uploads/bg_body2.png);")
     .hero-content
       .en.uk-animation-slide-bottom-medium Body Maintenance
       h1.uk-animation-slide-bottom-medium ボディメンテナンス
-      p.uk-animation-slide-bottom-medium テンピュール®製のベッドで行う
+      p.uk-animation-slide-bottom-medium 一人ひとりのカラダの特性や状態に合わせた
         br
-        | Studio MEANAオリジナルの
-        br
-        | パーソナルストレッチ・マッサージ
+        | オーダーメイド・トレーニング
   .uk-container.body
     .body-card(uk-height-match="target: .card-body", uk-scrollspy="target: &gt; .card; cls: uk-animation-slide-bottom-medium; delay: 50")
       .card
-        .card-img(style="background-image:url(../uploads/body02.jpg);")
-          .point
-            ion-icon(name="alert")
+        .card-img(style="background-image:url(/uploads/body02.jpg);")
         .card-body
-          h3 Studio MEANAオリジナル器具
-          p パーソナルストレッチや各種マッサージの際に横になっていただくベッドはテンピュール®製のもの。極上の寝心地で、心の底からリラックスして施術を受けていただけます。このベッドはリクライニング機能もついており、理想の睡眠姿勢「Zero-G® ポジション」 を取ることができ、 体圧分散のテンピュール®製の効果も相まって、パーソナルストレッチや各種マッサージの効果をより高めます。テンピュール®の寝具は、インストラクターも自宅で長年使用している信頼のベッドです。
+          h2 Studio MEANAオリジナル器具
+          p 各種マッサージの際には、スムースかつ的確に目的の箇所をほぐせるようStudio MEANAオリジナルの器具を使用します。この器具は、人の身体にもっとも親和性の高い純チタンで作られており、アレルギーの心配がなく、熱伝導率が高いことから、触感がとても気持ちの良いものとなっています。ハンドマッサージにこの器具を使用するマッサージを併用することで、より効果の高いマッサージを実現しています。
       .card
-        .card-img(style="background-image:url(../uploads/body01.jpg);")
-          .point
-            ion-icon(name="alert")
+        .card-img(style="background-image:url(/uploads/body01.jpg);")
         .card-body
-          h3 テンピュール®製ベッド＆枕
-          p 各種マッサージの際には、スムースかつ的確に目的の箇所をほぐせるようStudio MEANAオリジナルの器具を使用します。この器具は、人の身体にもっとも親和性の高い純チタンで作られており、アレルギーの心配がなく、熱伝導率が低いことから、触感がとても気持ちの良いものとなっています。ハンドマッサージにこの器具を使用するマッサージを併用することで、より効果の高いマッサージを実現しています。
+          h2 テンピュール®製ベッド＆枕
+          p パーソナルストレッチや各種マッサージの際に横になっていただくベッドはテンピュール®製のもの。極上の寝心地で、心の底からリラックスして施術を受けていただけます。このベッドはリクライニング機能もついており、理想の睡眠姿勢「Zero-G® ポジション」 を取ることができ、 体圧分散のテンピュール®製の効果も相まって、パーソナルストレッチや各種マッサージの効果をより高めます。テンピュール®の寝具は、インストラクターも自宅で長年使用している信頼のベッドです。
     section.menu-section
       h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Menu
       p.section-p(uk-scrollspy="uk-animation-slide-bottom-medium") テンピュール®製のベッドで行う Studio MEANAオリジナルの
@@ -60,7 +53,7 @@ block body
             span 60min
           .content
             h3 Upper Body Massage
-            p 肩のコリ、腰・肩あのハリ、手のこわばり、呼吸器系の弱い方など、特に上半身がつらい方におすすめです。
+            p 肩のコリ、腰・肩のハリ、手のこわばり、呼吸器系の弱い方など、特に上半身がつらい方におすすめです。
         .schedule
           time
             i.material-icons access_time
@@ -73,7 +66,7 @@ block body
             i.material-icons access_time
             span 60min
           .content
-            h3 Head Spa &amp;amp; Face Massage
+            h3 Head Spa &amp; Face Massage
             p 小顔になりたい方、顔の歪み・むくみ・たるみを改善します。肌荒れ、頭や目が重い、不眠、片頭痛などの症状がある方にもおすすめです。
         .schedule
           time
@@ -96,6 +89,15 @@ block body
           .content
             h3 Personal Stretch
             p お客様一人ひとりの症状や身体の歪みに合わせて、丁寧にほぐしながらストレッチしていきます。柔軟性不足、歪みや運動不足からくる不調に悩む方におすすめです。パーソナルトレーニング前後のストレッチのもおすすめです。
+        .schedule
+          time
+            i.material-icons access_time
+            span 40min
+          .content
+            h3 Face Stretch
+            p
+              | 頭部と繋がっている腕全体、肩周辺、首の筋膜をゆっくりほぐしてから温めたチタンでじっくり頭皮や表情筋をほぐしていきます。全体が柔らかくなったら骨格全体を整えます。
+              | 髪のパサつきや薄毛の原因となる頭皮の血行不良の改善と、シワたるみの原因となる表情筋のこわばり等を改善していきます。
   section.option-section
     .uk-container.option
       h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Options
@@ -104,66 +106,58 @@ block body
         | パーソナルストレッチ・マッサージ追加オプション
       .bodyoptions-container(uk-height-match="target: .card-body", uk-scrollspy="target: &gt; .card; cls: uk-animation-slide-bottom-medium; delay: 50")
         .card
-          .card-img(style="background-image:url(../uploads/option03.jpg);")
+          .card-img(style="background-image:url(https://www.meana-studio.com/uploads/option03.jpg);")
           .card-body
             h3 Massage Options
             table
-              tbody
-                tr
-                  td ヘッドスパ
-                  td(rowspan="5") &amp;yen;3,000（30min）
-                tr
-                  td 足裏マッサージ
-                tr
-                  td ハンドケア
-                tr
-                  td フェイスケア
-                tr
-                  td ネック&amp;amp;デコルテケア
+              tr
+                td ヘッドスパ
+                td(rowspan="5") ¥3,000（30min）
+              tr
+                td 足裏マッサージ
+              tr
+                td ハンドケア
+              tr
+                td フェイスケア
+              tr
+                td ネック&amp;amp;デコルテケア
         .card
-          .card-img(style="background-image:url(../uploads/option02.jpg);")
+          .card-img(style="background-image:url(https://www.meana-studio.com/uploads/option02.jpg);")
           .card-body
             h3 Oil Options
             table
-              tbody
-                tr
-                  td アロマブレンド
-                  td &amp;yen;500
-                tr
-                  td THANNマッサージオイル
-                  td &amp;yen;1,000
-                tr
-                  td サンタマリアノヴェッラ マッサージオイル for Body
-                  td &amp;yen;1,500
-                tr
-                  td サンタマリアノヴェッラ スキンケア for FACE
-                  td &amp;yen;1,000
+              tr
+                td アロマブレンド
+                td ¥500
+              tr
+                td THANNマッサージオイル
+                td ¥1,000
+              tr
+                td サンタマリアノヴェッラ マッサージオイル for Body
+                td ¥1,500
+              tr
+                td サンタマリアノヴェッラ スキンケア for FACE
+                td ¥1,000
+              tr
+                td
+                td
   .uk-container
     #gallery
       h2.section-title-m(uk-scrollspy="uk-animation-slide-bottom-medium") Gallery
       #gallery-container.swiper-container(uk-scrollspy="uk-animation-slide-bottom-medium")
         ul.swiper-wrapper
           li.swiper-slide
-            img(src="/about/uploads/gallery01.jpg", uk-img)
-            h3 スタジオ外観
+            img(src="/uploads/20200222231331-50b5d7f66ab77e55f2b01027d5c454be6f6a6a54.gif", uk-img)
+            h3
           li.swiper-slide
-            img(src="/about/uploads/gallery07.jpg", uk-img)
-            h3 受付・エントランス
+            img(src="/uploads/20200222231633-e20f34a9bf61d59725ff42f0e9f78d985fd10a2a.gif", uk-img)
+            h3
           li.swiper-slide
-            img(src="/about/uploads/gallery02.jpg", uk-img)
-            h3 ボディメンテンナンスルーム
+            img(src="/uploads/20200222231651-ca796c5e5cfeb36891b53f023da5e28afba97af6.jpg", uk-img)
+            h3
           li.swiper-slide
-            img(src="/about/uploads/gallery03.jpg", uk-img)
-            h3 渡り廊下
-          li.swiper-slide
-            img(src="/about/uploads/gallery04.jpg", uk-img)
-            h3 マシン
-          li.swiper-slide
-            img(src="/about/uploads/gallery05.jpg", uk-img)
-            h3 トレーニングルーム（1）
-          li.swiper-slide
-            img(src="/about/uploads/gallery06.jpg", uk-img)
-            h3 トレーニングルーム（2）
+            img(src="/uploads/20200222231711-0e1b61012080c4159bb799939fc2c83af96fb679.gif", uk-img)
+            h3
         a.swiper-button-prev(href="#")
         a.swiper-button-next(href="#")
       ul.swiper-pagination

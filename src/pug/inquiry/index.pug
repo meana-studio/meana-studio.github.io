@@ -1,45 +1,43 @@
 extends ../includes/_layout
 block var
-	- title = 'お問い合わせ | Meana'
-	- keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
-	- url = 'https://www.meana-studio.com/'
-	- image = 'image'
-	- site_name = 'site_name'
-	- description = '上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。'
+  - title = 'お問い合わせ | Meana'
+  - keywords = '上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア'
+  - url = '/inquiry/'
+  - image = '/inquiry/assets/img/ogp.png'
+  - description = 'Studio MEANAについて詳しく知りたい、入会、または体験してみたいなどご質問がある方は下記のフォームよりお問い合わせ下さい。'
 block body
-	div.uk-container
-		section.form-head
-			h1.uk-animation-slide-bottom-medium お問い合わせ
-			p.uk-animation-slide-bottom-medium MEANAについて詳しく知りたい、入会、または体験してみたいなど
-				br
-				| ご質問がある方は下記のフォームよりお問い合わせ下さい。
-		.form-body
-			form(action="confirm.html" uk-scrollspy="uk-animation-slide-bottom-medium")
-				fieldset
-					legend お名前
-					input(type="text" placeholder="例）　山田太郎")
-				fieldset
-					legend お名前（ふりがな）
-					input(type="text" placeholder="例）　やまだたろう")
-				fieldset
-					legend お電話番号（ハイフンなし）
-					input(type="tel" placeholder="例）　0487737787")
-				fieldset
-					legend メールアドレス
-					input(type="email" placeholder="例）　info@meana-studio.com")
-				fieldset
-					legend メールアドレスの確認
-					input(type="email" placeholder="例）　info@meana-studio.com")
-				fieldset
-					legend お問い合わせ内容
-					textarea
-				.privacy
-					p MEANA STUDIOへのお問い合わせに際し、
-						br
-						| ご入力いだいたお客様の個人情報について、
-						br
-						| 
-						a(href="/privacy/" target="_blank") プライバシーポリシー
-						| に従い取り扱います。
-				.submit
-					input(type="submit" value="同意して確認画面へ")
+  .uk-container
+    section.form-head
+      h1.uk-animation-slide-bottom-medium お問い合わせ
+      p.uk-animation-slide-bottom-medium Studio MEANAについて詳しく知りたい、入会、または体験してみたいなど
+        br
+        | ご質問がある方は下記のフォームよりお問い合わせ下さい。
+    .form-body
+      form(uk-scrollspy="uk-animation-slide-bottom-medium", method="post", action="/inquiry/inquiry.cgi", name="mail_form", id="mail_form")
+        fieldset
+          legend お名前
+          input(name="mail_author", type="text", placeholder="例）　山田太郎", value="", required)
+        fieldset
+          legend お名前（ふりがな）
+          input(name="mail_kana", type="text", placeholder="例）　やまだたろう", value="", required)
+        fieldset
+          legend お電話番号（ハイフンなし）
+          input(name="mail_tel", type="tel", placeholder="例）　0487737787", value="", required)
+        fieldset
+          legend メールアドレス
+          input(name="mail_email", type="email", placeholder="例）　info@meana-studio.com", value="", required)
+        fieldset
+          legend お問い合わせ内容
+          textarea(name="mail_text", required)
+        .privacy
+          p Studio MEANAへのお問い合わせに際し、
+            br
+            | ご入力いだいたお客様の個人情報について、
+            br
+            a(href="/privacy/", target="_blank") プライバシーポリシー
+            | に従い取り扱います。
+        .submit
+          input(type="hidden", name="mail_blog_id", value="11")
+          input(type="hidden", name="mail_setting", value="お問い合わせ")
+          input(type="hidden", name="mail_preview", id="mail_preview", value="確認")
+          input(type="submit", value="同意して確認画面へ")

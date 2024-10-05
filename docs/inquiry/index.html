@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>お問い合わせ | Meana | Studio MEANA（上尾駅 徒歩10分）</title>
-  <meta name="description" content="上尾駅徒歩10分のダンス・ストレッチスタジオ、MEANA STUDIO。パーソナルトレーニング、ストレッチ、キッズレッスン、ボディケア・フェイスケアなども行ってます。">
+  <meta name="description" content="Studio MEANAについて詳しく知りたい、入会、または体験してみたいなどご質問がある方は下記のフォームよりお問い合わせ下さい。">
   <meta name="keywords" content="上尾,ストレッチ,ダンス,スタジオ,パーソナル,キッズ,ボディケア,フェイスケア">
   <meta property="og:site_name" content="Studio Meana">
-  <meta property="og:url" content="https://www.meana-studio.comhttps://www.meana-studio.com/">
+  <meta property="og:url" content="https://www.meana-studio.com/inquiry/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.meana-studio.comimage">
+  <meta property="og:image" content="https://www.meana-studio.com/inquiry/assets/img/ogp.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -123,32 +123,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="uk-container">
       <section class="form-head">
         <h1 class="uk-animation-slide-bottom-medium">お問い合わせ</h1>
-        <p class="uk-animation-slide-bottom-medium">MEANAについて詳しく知りたい、入会、または体験してみたいなど<br>ご質問がある方は下記のフォームよりお問い合わせ下さい。</p>
+        <p class="uk-animation-slide-bottom-medium">Studio MEANAについて詳しく知りたい、入会、または体験してみたいなど<br>ご質問がある方は下記のフォームよりお問い合わせ下さい。</p>
       </section>
       <div class="form-body">
-        <form action="confirm.html" uk-scrollspy="uk-animation-slide-bottom-medium">
+        <form uk-scrollspy="uk-animation-slide-bottom-medium" method="post" action="/inquiry/inquiry.cgi" name="mail_form" id="mail_form">
           <fieldset>
-            <legend>お名前</legend><input type="text" placeholder="例）　山田太郎">
+            <legend>お名前</legend><input name="mail_author" type="text" placeholder="例）　山田太郎" value="" required>
           </fieldset>
           <fieldset>
-            <legend>お名前（ふりがな）</legend><input type="text" placeholder="例）　やまだたろう">
+            <legend>お名前（ふりがな）</legend><input name="mail_kana" type="text" placeholder="例）　やまだたろう" value="" required>
           </fieldset>
           <fieldset>
-            <legend>お電話番号（ハイフンなし）</legend><input type="tel" placeholder="例）　0487737787">
+            <legend>お電話番号（ハイフンなし）</legend><input name="mail_tel" type="tel" placeholder="例）　0487737787" value="" required>
           </fieldset>
           <fieldset>
-            <legend>メールアドレス</legend><input type="email" placeholder="例）　info@meana-studio.com">
+            <legend>メールアドレス</legend><input name="mail_email" type="email" placeholder="例）　info@meana-studio.com" value="" required>
           </fieldset>
           <fieldset>
-            <legend>メールアドレスの確認</legend><input type="email" placeholder="例）　info@meana-studio.com">
-          </fieldset>
-          <fieldset>
-            <legend>お問い合わせ内容</legend><textarea></textarea>
+            <legend>お問い合わせ内容</legend><textarea name="mail_text" required></textarea>
           </fieldset>
           <div class="privacy">
-            <p>MEANA STUDIOへのお問い合わせに際し、<br>ご入力いだいたお客様の個人情報について、<br> <a href="/privacy/" target="_blank">プライバシーポリシー</a>に従い取り扱います。</p>
+            <p>Studio MEANAへのお問い合わせに際し、<br>ご入力いだいたお客様の個人情報について、<br><a href="/privacy/" target="_blank">プライバシーポリシー</a>に従い取り扱います。</p>
           </div>
-          <div class="submit"><input type="submit" value="同意して確認画面へ"></div>
+          <div class="submit"><input type="hidden" name="mail_blog_id" value="11"><input type="hidden" name="mail_setting" value="お問い合わせ"><input type="hidden" name="mail_preview" id="mail_preview" value="確認"><input type="submit" value="同意して確認画面へ"></div>
         </form>
       </div>
     </div>

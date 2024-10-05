@@ -1,1 +1,1 @@
-"use strict";document.documentElement.style.setProperty("--vh","".concat(.01*window.innerHeight,"px"));
+"use strict";function setViewportHeight(){var e=.01*(window.innerHeight-document.querySelector("#header").offsetHeight);document.documentElement.style.setProperty("--vh","".concat(e,"px"))}setViewportHeight(),window.addEventListener("resize",setViewportHeight);

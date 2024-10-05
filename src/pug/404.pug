@@ -1,0 +1,13 @@
+extends ./includes/_layout
+block var
+  - title = 'ページが見つかりませんでした'
+  - keywords = ''
+  - url = '/404.html'
+  - image = '/assets/img/ogp.png'
+  - description = 'ページが見つかりませんでした'
+block body
+  .uk-container
+    section.legal-head
+      h1 ページが見つかりませんでした
+    .legal-body(uk-scrollspy="target: *; cls: uk-animation-slide-bottom-medium; delay: 40")
+      p 記事の掲載終了などにより、ご覧になっていたページがなくなっているか、直接アドレスを入力された方は、URLの入力ミスなどの可能性があります。大変申し訳ございませんが、再度目的のページをお探しください。

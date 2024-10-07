@@ -13,31 +13,6 @@ block body
         br
         | ご質問がある方は下記のフォームよりお問い合わせ下さい。
     .form-body
-      form(uk-scrollspy="uk-animation-slide-bottom-medium", method="post", action="/inquiry/inquiry.cgi", name="mail_form", id="mail_form")
-        fieldset
-          legend お名前
-          input(name="mail_author", type="text", placeholder="例）　山田太郎", value="", required)
-        fieldset
-          legend お名前（ふりがな）
-          input(name="mail_kana", type="text", placeholder="例）　やまだたろう", value="", required)
-        fieldset
-          legend お電話番号（ハイフンなし）
-          input(name="mail_tel", type="tel", placeholder="例）　0487737787", value="", required)
-        fieldset
-          legend メールアドレス
-          input(name="mail_email", type="email", placeholder="例）　info@meana-studio.com", value="", required)
-        fieldset
-          legend お問い合わせ内容
-          textarea(name="mail_text", required)
-        .privacy
-          p Studio MEANAへのお問い合わせに際し、
-            br
-            | ご入力いだいたお客様の個人情報について、
-            br
-            a(href="/privacy/", target="_blank") プライバシーポリシー
-            | に従い取り扱います。
-        .submit
-          input(type="hidden", name="mail_blog_id", value="11")
-          input(type="hidden", name="mail_setting", value="お問い合わせ")
-          input(type="hidden", name="mail_preview", id="mail_preview", value="確認")
-          input(type="submit", value="同意して確認画面へ")
+      .formrun-embed(data-formrun-form="@kyosuke-8V2BHZnoM9fhBwQCqxsG", data-formrun-redirect="true")
+block end_of_body
+  script(src="https://sdk.form.run/js/v2/embed.js")

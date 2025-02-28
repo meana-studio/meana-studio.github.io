@@ -3,7 +3,7 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^10.2.4",
-    "babel-loader": "^9.1.0",
+    "babel-loader": "^10.0.0",
     "browser-sync": "^3.0.3",
     "browserify": "^17.0.0",
     "css-declaration-sorter": "^7.2.0",
